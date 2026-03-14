@@ -4,182 +4,965 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robolawyer</title>
+  <title>Robolawyer™ — Pillars</title>
+  <meta name="description"
+    content="Modeling beneficial social outcomes through schema-free semantic data, local-first computation, and human-centric security.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <style>
+    :root {
+      --bg: #0d1117;
+      --bg-surface: #161b22;
+      --bg-elevated: #1c2129;
+      --border: #30363d;
+      --border-accent: #3b82f6;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --text-subtle: #6e7681;
+      --accent: #58a6ff;
+      --accent-warm: #f0883e;
+      --accent-green: #3fb950;
+      --accent-purple: #bc8cff;
+      --accent-red: #f85149;
+      --accent-cyan: #39d3f5;
+      --code-bg: #0d1117;
+      --max-w: 860px;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
     }
 
-    .container {
-      background-color: white;
-      border: 3px solid #333;
-      border-radius: 10px;
-      padding: 40px;
-      max-width: 720px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
       text-align: center;
     }
 
-    .header-box {
-      margin-bottom: 24px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      background-color: #fafafa;
-    }
-
-    .header-box h1 {
-      color: #333;
-      font-size: 2.4em;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .header-box img {
-      max-width: 60%;
-      /* smaller image */
+    .hero-logo {
+      max-width: 280px;
       height: auto;
-      display: block;
-      margin: 0 auto;
-      /* centered inside the box */
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
     }
 
-    .summary {
-      text-align: left;
-      margin-top: 26px;
-      padding: 20px;
-      background: #fcfcfc;
-      border: 1px solid #e3e3e3;
-      border-radius: 8px;
-    }
-
-    .summary h2 {
-      font-size: 1.3em;
-      margin-bottom: 12px;
-      color: #222;
-    }
-
-    .summary p {
-      margin-bottom: 12px;
-      color: #444;
-      line-height: 1.45;
-    }
-
-    .summary ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .summary li {
-      margin: 8px 0;
-      line-height: 1.4;
-    }
-
-    .summary li b {
+    .hero h1 {
+      font-size: 2.4rem;
       font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .footer {
-      margin-top: 24px;
-      color: #666;
-      font-size: 0.9em;
-      border-top: 1px solid #ddd;
-      padding-top: 16px;
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Main Content ── */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 2rem 0 0.75rem;
+    }
+
+    h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent-purple);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    em {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--accent-purple);
+      text-decoration: underline;
+    }
+
+    /* ── Inline code ── */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background: var(--bg-elevated);
+      color: var(--accent-cyan);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── Code blocks ── */
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      line-height: 1.5;
+    }
+
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── Lists ── */
+    ul,
+    ol {
+      margin: 0.5rem 0 1.25rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    li strong {
+      color: var(--accent-warm);
+    }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: var(--bg-elevated);
+      color: var(--accent);
+      font-weight: 600;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+    }
+
+    td {
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    tr:nth-child(even) td {
+      background: var(--bg-surface);
+    }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid var(--accent-purple);
+      background: var(--bg-surface);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ── Horizontal rule ── */
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--border);
+      margin: 3rem 0;
+    }
+
+    /* ── Duality diagram ── */
+    .duality-diagram {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    /* ── Pillar cards ── */
+    .pillar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      transition: border-color 0.3s;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--accent);
+    }
+
+    .pillar-card h3 {
+      margin-top: 0;
+    }
+
+    /* ── Status badges ── */
+    .badge {
+      display: inline-block;
+      padding: 0.15em 0.6em;
+      border-radius: 12px;
+      font-size: 0.82em;
+      font-weight: 500;
+    }
+
+    .badge-complete {
+      background: #1a3a2a;
+      color: var(--accent-green);
+    }
+
+    .badge-progress {
+      background: #3a2a1a;
+      color: var(--accent-warm);
+    }
+
+    .badge-planned {
+      background: #1a2a3a;
+      color: var(--accent);
+    }
+
+    .badge-future {
+      background: #2a1a3a;
+      color: var(--accent-purple);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-subtle);
+      font-size: 0.9rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 2.5rem 1.25rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-logo {
+        max-width: 200px;
+      }
+
+      main {
+        padding: 1.5rem 1.25rem 3rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      pre {
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
+
+      table {
+        font-size: 0.82rem;
+      }
+
+      th,
+      td {
+        padding: 0.5rem 0.65rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="header-box">
-      <h1>Robolawyer™</h1>
-      <img src="robolawyer-tm.jpg" alt="Robolawyer">
-    </div>
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <header class="hero">
+    <img src="robolawyer-tm.jpg" alt="Robolawyer" class="hero-logo">
+    <h1>Pillars — Architectural Vision for this Ecosystem</h1>
+    <p class="tagline">Modeling beneficial social outcomes through schema-free semantic data, local-first computation,
+      and human-centric security — all running on the hardware you may already own.</p>
+  </header>
 
-    <div class="summary">
-      <h2>Secret-server, the "Vivify" Engine & Social Science Modeling</h2>
-      <p>
-        The <b>Secret Server</b> project serves to keep secrets (such as passwords) as a highly-mobile and overly-secure
-        network dataserver specifically for Android in a star topology. It <b>prototypes</b> the autovivification of
-        complex <b>semantic data</b> that is easily traversed by modern agents especially in edge applications. Its
-        long-ranging mission is to serve as an engine for modeling <b>beneficial outcomes in a social science
-          context</b>, leveraging local-first execution on mobile hardware to ensure total data sovereignty.
-      </p>
+  <main>
 
-      <h3>🏛️ The "Vivify" Philosophy</h3>
-      <p>
-        At the heart of the project is the <b>Vivify</b> pillar—a semantic data engine designed to handle information
-        without pre-defined schemas. Unlike traditional databases, Vivify uses autovivification to:
-      </p>
+    <!-- ════════════════════ MISSION ════════════════════ -->
+    <section id="mission">
+      <h2>The Mission: Analogical Synthesis for Social Benefit</h2>
+
+      <p>At its highest level, the robolawyer-tm ecosystem exists to answer one question: <strong>Can we model and
+          predict beneficial outcomes in complex human situations — dynamically, privately, and on local
+          hardware?</strong></p>
+
+      <p>The answer requires bridging two fundamentally different ways of understanding the world:</p>
+
+      <div class="duality-diagram">
+        <pre><code>┌──────────────────────────────┐     ┌──────────────────────────────┐
+│    LEFT: SEMANTIC SIDE       │     │    RIGHT: DIGITAL SIDE       │
+│    ──────────────────        │     │    ───────────────────       │
+│    Analogical "Logos"        │     │    Analytical Precision      │
+│    Emotion, intuition,       │     │    Code, organization,       │
+│    felt meaning              │     │    data structures           │
+│    "What does this MEAN?"    │     │    "How do we PROCESS this?" │
+│    ───────────               │     │    ────────────              │
+│    The human side            │     │    The machine side          │
+│    The heart                 │     │    The stone                 │
+└──────────────┬───────────────┘     └───────────────┬──────────────┘
+               │                                     │
+               └─────────────┬───────────────────────┘
+                             │
+                  ┌──────────▼────────────┐
+                  │   FUNCTIONAL MODEL    │
+                  │ Predicting Beneficial │
+                  │       Outcomes        │
+                  └───────────────────────┘</code></pre>
+      </div>
+
+      <p><strong>Left (Semantic):</strong> Human truth — emotional logic, analogical reasoning, the "logos" where
+        language codifies emotion into word-organized logic. This is the realm of higher thought expressed in the arts:
+        something deeply <em>felt</em>, not merely computed. LLMs participate here through <strong>analogical
+          synthesis</strong> — processing vast token "receptions," perceiving semantic patterns, and outputting coherent
+        sense-making that mirrors human intuition.</p>
+
+      <p><strong>Right (Digital):</strong> Machine truth — code, analytics, filesystem organization, pattern detection
+        pipelines. Precise like transistor-based systems, excellent at reduction and structure, but limited in
+        analogical depth without the left side's guidance.</p>
+
+      <p><strong>Synthesis:</strong> Where these two sides meet, the project's core goal emerges: <strong>predicting
+          beneficial outcomes</strong> by combining emotional ground truth with analytical pattern detection. High
+        tension between left and right signals marks the most promising zones for intervention — where digital systems
+        most betray analog human truth.</p>
+
+      <p>This duality is not a metaphor. It is the <strong>architectural spine</strong> of the entire ecosystem.</p>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ VIVIFY ════════════════════ -->
+    <section id="vivify">
+      <h2>Vivify: The Schema-Free Semantic Data Engine</h2>
+
+      <p>At the center of everything sits <strong>Vivify</strong> — a semantic data engine that handles information
+        without pre-defined schemas. Inspired by Perl's autovivification (dynamic hash-of-hashes creation), Vivify lets
+        data structures "come to life" as they are needed, capturing emergent complexity without database migrations or
+        rigid taxonomies.</p>
+
+      <h3>How It Works</h3>
+
+      <p>Data enters the system as <strong>inferences</strong> — atomic units of text with no pre-assigned categories.
+        The process:</p>
+
+      <p><strong>Left-LLM Semantic Pass</strong> — An LLM reads each inference and extracts 8–12 <strong>keyword
+          clumps</strong> that "feel" central to the meaning. No external ontologies. No pre-labeled concepts. Keywords
+        emerge from felt meaning: <code>conflict_asymmetry</code>, <code>resolution_focus</code>,
+        <code>therapeutic_potential</code>, <code>emotional_truth</code>.</p>
+
+      <p><strong>Keyword Co-occurrence</strong> — Across all inferences, keywords that frequently appear together form
+        natural clusters. Dense regions in this co-occurrence graph become <strong>emergent categories</strong> — purely
+        bottom-up, organically discovered.</p>
+
+      <p><strong>Autovivified Structure</strong> — Categories become filesystem paths (3–4 layers deep), and deeper data
+        lives in JSON with full autovivification capabilities. The filesystem literally <em>grows itself</em> from the
+        keywords:</p>
+
+      <pre><code>inferences/
+├── conflict_resolution/
+│   ├── misrepresentation/
+│   │   └── stressed_perception/
+│   │       └── inf_123.json
+│   └── resolution_focus/
+│       └── adaptive_compromise/
+│           └── inf_456.json
+├── therapeutic_prediction/
+│   └── beneficial_outcomes/
+│       └── ground_truth_outcome/
+│           └── inf_789.json
+└── index.json   # Master co-occurrence map</code></pre>
+
+      <p><strong>Dual-View Storage</strong> — Each inference maintains separate left (semantic) and right (digital)
+        keyword lists, preserving the duality:</p>
+
+      <pre><code>{
+  "id": "inf_123",
+  "raw_text": "...",
+  "left_keywords": ["conflict_asymmetry", "emotional_truth", "therapeutic_potential"],
+  "right_keywords": ["json_indexing", "pattern_detection", "similarity_clustering"],
+  "clumps": {
+    "conflict_resolution": ["conflict_asymmetry", "resolution_focus"],
+    "therapeutic_signal": ["emotional_truth", "therapeutic_potential"]
+  },
+  "category_paths": ["conflict_resolution/therapeutic_signal"]
+}</code></pre>
+
+      <h3>Vivify Rules (Objective)</h3>
+
+      <p>The system operates under strict, bottleable constraints:</p>
+
       <ul>
-        <li><b>Model Emergent Relationships:</b> Capture complex social interactions and outcomes as they happen,
-          without forcing them into a rigid structure.</li>
-        <li><b>Preserve Social Context:</b> Allow data to "vivi-fy" (bring to life) nested semantic hierarchies that
-          reflect real-world complexity.</li>
-        <li><b>Drive Beneficial Outcomes:</b> Provide a sandbox for modeling interventions and results in sensitive
-          social environments where privacy is paramount.</li>
+        <li><strong>No external taxonomies</strong> — All categories emerge from local keyword patterns</li>
+        <li><strong>No domain assumptions</strong> — System accepts any scenario as raw text</li>
+        <li><strong>Keywords from felt meaning</strong> — Concept-level tokens, not surface words
+          (<code>perjury_pattern</code> over <code>lie</code>, <code>conflict_asymmetry</code> over <code>unfair</code>)
+        </li>
+        <li><strong>Graph-based emergence</strong> — Category seeds are high-degree, high-weight keywords;
+          sub-categories form from tight co-occurrence neighborhoods</li>
+        <li><strong>Multi-assignment</strong> — Inferences may belong to multiple category paths; no forced single
+          "home"</li>
+        <li><strong>Iterative refinement</strong> — New inferences can create new seeds, split or merge old categories
+        </li>
+        <li><strong>Guardrails, not schemas</strong> — Constraints may shape <em>how</em> categories form, but never
+          import foreign taxonomies</li>
       </ul>
 
-      <h3>💡 The Product as Proof-of-Concept</h3>
-      <p>
-        While the current Secret Server serves as a secure vault, its true value is as a physical demonstration of the
-        project's core pillars in action:
-      </p>
+      <h3>The Payload Model</h3>
+
+      <pre><code>Payload (always JSON for consistency + recognizability)
+├── UPDATE / CREATION
+│   ├── Input (Graphical UI or Curses CLI)
+│   ├── Autovivify (build un-schema'd JSON, hash of hashes)
+│   ├── Secrecy (encrypt secrets)
+│   ├── Freeze (serialize payload → prepare for IP send)
+│   └── Server (strip layers, store JSON + binary blobs)
+└── RETRIEVAL
+    ├── Input → name, app/topic, depth traversal
+    ├── Return (encrypted payload or structure subset)
+    └── Client (reverse creation process → display)</code></pre>
+
+      <p>The filesystem <em>is</em> the database. No opaque binary formats. Users can audit their data with any text
+        editor. Backups are <code>cp</code>. Migrations are <code>mv</code>.</p>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ SUPPORTING PILLARS ════════════════════ -->
+    <section id="pillars">
+      <h2>The Supporting Pillars</h2>
+
+      <p>Vivify is the data engine, but it requires a hardened, secure, sovereign platform to run on. Four supporting
+        pillars make this possible:</p>
+
+      <!-- Pillar 1 -->
+      <div class="pillar-card">
+        <h3>1. Secrecy — Human-in-the-Loop Security</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Current State</th>
+              <th>Research Vision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Server-side PBKDF2-HMAC-SHA256 encryption</td>
+              <td>Zero-Knowledge client-side encryption</td>
+            </tr>
+            <tr>
+              <td>WiFi hotspot password + manual <code>w3m</code> browser confirmation</td>
+              <td>Proximity and intentionality as primary security keys</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Two-factor authentication</strong> is physical, not theatrical:</p>
+        <ul>
+          <li><strong>WiFi Hotspot</strong> creates a private, local-area network immune to external surveillance</li>
+          <li><strong>Human Approval</strong> requires manual confirmation for new device pairing</li>
+        </ul>
+        <p>SSH key-based auth eliminates separate API keys. All communication flows through <strong>encrypted SSH
+            tunnels</strong> — no plaintext HTTP, no complex SSL certificate chains.</p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-card">
+        <h3>2. Payload Persistence — The Filesystem is the Database</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Current State</th>
+              <th>Research Vision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Human-readable JSON files on Android filesystem</td>
+              <td>Multi-layer payloads with binary blob handling</td>
+            </tr>
+            <tr>
+              <td>Paths like <code>db/{username}/{app_name}/secret.json</code></td>
+              <td>Auditable, scalable datasets mapped directly to filesystem</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>No database engine to fail. No opaque formats. Data is just files — recoverable with standard Unix tools,
+          transparent to any text editor.</p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-card">
+        <h3>3. Server — Hardened Mobile Edge</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Current State</th>
+              <th>Research Vision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Professional-grade Flask engine on Android/Termux</td>
+              <td>Distributed, modular edge nodes</td>
+            </tr>
+            <tr>
+              <td>Auto-start, wake-lock, SSHFS laptop-as-IDE</td>
+              <td>Low-cost, localized research platform</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The phone acts as the <strong>DataServer (Hub)</strong> in a star topology. It proves the "Mobile Edge" is a
+          viable place for serious server-side modeling — no cloud needed, just a hardened userspace operating within
+          Android's own sandbox.</p>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="pillar-card">
+        <h3>4. Design Philosophy — Structure → Process → Validation</h3>
+
+        <p>Documentation across the ecosystem follows a strict inversion of the typical flow:</p>
+
+        <pre><code>1. Define the TARGET FILE STRUCTURE first (non-negotiable)
+2. Write PROCESS documentation that explicitly references that structure
+3. Include VALIDATION CODE so users can check their work at any point</code></pre>
+
+        <p>Every installation step points to where files go. Every phase includes verification. A structure validator
+          confirms correctness with a single command. This removes ambiguity, makes processes self-verifying, and
+          ensures new developers see the expected target state immediately.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ STAR-BRIDGE ════════════════════ -->
+    <section id="star-bridge">
+      <h2>The Schema-Free Prototype: Star-Bridge Topology</h2>
+
+      <p>The <strong>star-bridge</strong> project is the physical realization of the Vivify engine — a working prototype
+        that demonstrates schema-free data persistence on hardened mobile hardware, connected through SSH mesh
+        networking.</p>
+
+      <h3>Current Model (Star Topology)</h3>
+
+      <pre><code>     Edge device
+        / | \
+       /  |  \
+ Device Device Phone</code></pre>
+
       <ul>
-        <li><b>Vivify: Data Without Schemas</b> - Proves we can capture emergent social data through living data models
-          without database migrations.</li>
-        <li><b>Secrecy: Human-in-the-Loop Security</b> - Replaces security theater with tangible trust models based on
-          physical proximity and intentionality.</li>
-        <li><b>Payload: The Filesystem is the Database</b> - Demonstrates that direct filesystem mapping makes data
-          auditable, scaleable, and indestructible.</li>
-        <li><b>Server: Hardened Mobile Edge</b> - Proves that serial mobile hardware can run professional-grade social
-          science engines.</li>
+        <li><strong>star-bridge</strong> manages SSH connections between a Linux admin box and Android phones</li>
+        <li><strong>secret-server</strong> runs on each phone as a hardened Flask application in Termux</li>
+        <li>Data flows through encrypted SSH tunnels; filesystems mount via SSHFS</li>
+        <li>Zero cloud dependencies; everything runs locally</li>
       </ul>
 
-      <h3>⛓️ Technical Grounding: Beyond the "Vapor"</h3>
-      <p>
-        The implementation is grounded in a production-ready stack:
-      </p>
+      <h3>Vision (Mesh topology connecting stars)</h3>
+
+      <pre><code>
+            Phone Phone Phone
+              \     |      /
+               \    |     /
+               Edge device
+               /          \
+              /            \
+             /              \
+    Edge device -----------Edge device
+       / | \                  / | \
+      /  |  \                /  |  \
+ Phone Phone Phone      Phone Phone Phone</code></pre>
+
+      <p>The star extends to a <strong>mesh</strong> where phones discover and connect to each other directly via SSH —
+        forming a resilient, decentralized network with no central cloud dependency.</p>
+
+      <h4>Core Principles</h4>
       <ul>
-        <li><b>Star Topology:</b> The phone acts as the DataServer (Hub) in a private local-area network enforced by
-          WiFi Hotspot.</li>
-        <li><b>Encrypted Transport:</b> All traffic is routed through battle-tested Enrypted SSH Tunnels with key-based
-          authentication.</li>
-        <li><b>Persistence:</b> JSON over Filesystem ensures transparency and Unix-native data safety.</li>
-        <li><b>Edge Prototyping:</b> Hardened Termux userspace provides a safe, high-speed development environment on
-          the target device.</li>
+        <li><strong>Zero Commercial Platforms</strong> — Pure SSH, routing tables, and custom Python</li>
+        <li><strong>Pure P2P Discovery</strong> — Phones find each other via local scan or lightweight registry</li>
+        <li><strong>SSH Tunneling</strong> — All bridges built on SSH's native capabilities</li>
+        <li><strong>Resilient Chains</strong> — If a direct link fails, reroute through intermediaries</li>
+        <li><strong>90s P2P Inspiration</strong> — Mirrors Gnutella/Kazaa: local discovery, peer directories, chain
+          routing</li>
       </ul>
 
-      <h3>🛠️ Key Achievements</h3>
+      <h4>Implementation Roadmap</h4>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1 (Current)</strong></td>
+            <td>Single phone + Linux (star-bridge)</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2</strong></td>
+            <td>Two phones + registry; phone discovery via <code>known_phones.json</code></td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3</strong></td>
+            <td>Auto-bridging; phone-to-phone SSH tunnels; routing &amp; failover</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4</strong></td>
+            <td>Service discovery API; phones advertise and auto-connect</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The mesh doesn't require a new protocol — it's just SSH doing what it was designed to do.</p>
+
+      <h3>Notation Vision: Accessible Process Flows</h3>
+
+      <p>The prototype includes a vision for <strong>dynamic, visual notation</strong> that replaces flat checklists
+        with multi-actor flow diagrams:</p>
+
+      <pre><code>LINUX BOX                              PHONE
+   │                                    │
+   ├─ Discover IP via nmcli ───────────┤
+   ├─ SSH to port 8022 ────────────────→ sshd (listening)
+   │                                    │
+   ├─ Copy files via SCP ─────────────→ ~/secret-server/
+   │                                    │
+   └─ Run pip install ────────────────→ ~/secret-server/requirements.txt
+                                        │
+                                        └─→ [Ready to run]</code></pre>
+
+      <p>Principles: clarity first, multi-actor design, data-centric flow, verification built-in, error-aware branching.
+        The long-term vision extends to interactive viewers with progress tracking and inline recovery steps.</p>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ LONG-TERM VISION ════════════════════ -->
+    <section id="vision">
+      <h2>The Long-Term Vision: A Therapeutic Tool for Social Benefit</h2>
+
+      <p>Everything converges toward a single goal: <strong>a widely-applied therapeutic tool for modeling beneficial
+          outcomes in complex human situations.</strong></p>
+
+      <h3>How It All Connects</h3>
+
+      <pre><code>Social Science Mission (The Why)
+    ↓
+Semantic-Digital Duality (The Framework)
+    ↓
+Vivify Engine (The Data Model)
+    ├── Secrecy (Privacy protection)
+    ├── Payload (Transparent persistence)
+    ├── Server (Hardened edge platform)
+    └── Design Philosophy (Reliable documentation)
+    ↓
+Star-Bridge Prototype (The Physical Realization)
+    ├── Secret Server (Working MVP)
+    └── Mesh Topology (Decentralized future)
+    ↓
+Inference Vivify (The Emerging Application)
+    ├── Left-LLM semantic passes
+    ├── Keyword-clump autovivification
+    ├── Emergent category structures
+    └── Beneficial outcome prediction</code></pre>
+
+      <h3>The Inference Pipeline</h3>
+
+      <p>The system processes diverse inferences — from technical discussions to conflict scenarios — through a
+        dual-lens pipeline:</p>
+
+      <ol>
+        <li><strong>Left (Semantic) Pass:</strong> Extract keyword clumps based on felt meaning —
+          <code>conflict_asymmetry</code>, <code>resolution_focus</code>, <code>emotional_truth</code>,
+          <code>therapeutic_potential</code></li>
+        <li><strong>Right (Digital) Pass:</strong> Extract structural keywords — <code>json_indexing</code>,
+          <code>pattern_detection</code>, <code>similarity_clustering</code></li>
+        <li><strong>Synthesis:</strong> Measure the tension between left and right views — high divergence marks where
+          digital systems most betray analog human truth, signaling prime zones for therapeutic intervention</li>
+        <li><strong>Prediction:</strong> Over time, emergent category patterns across many inferences reveal which
+          configurations predict beneficial outcomes vs. harmful ones</li>
+      </ol>
+
+      <h3>Conflict as Universal Testbed</h3>
+
+      <p>The system models conflict objectively, without domain-specific assumptions:</p>
+
       <ul>
-        <li><b>Hardened Android Userspace:</b> Reliable platform for field research within mobile OS restrictions.</li>
-        <li><b>Unified Admin Workflow:</b> SSHFS integration bridges mobile execution with powerful research analysis
-          tooling.</li>
-        <li><b>Local-First Sovereignty:</b> Zero cloud dependencies ensures participant data never leaves the research
-          hardware.</li>
+        <li><strong>Positions</strong> that don't align</li>
+        <li><strong>Contexts</strong> that constrain outcomes</li>
+        <li><strong>Outcomes</strong> better or worse for different perspectives</li>
+        <li><strong>Resolution patterns</strong> — not "justice" but movement toward something liveable</li>
       </ul>
-    </div>
-    <footer>
-      <p> <span>&#127279;</span> Copyleft 2026 - Robolawyer: free to share and remix wo restrictions</p>
-    </footer>
-    <script defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-      data-cf-beacon='{"version":"2024.11.0","token":"cc923cebb6c347b79df6ad3112e916ae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
-      crossorigin="anonymous"></script>
+
+      <p>Generic conflict keywords replace domain-specific ones: <code>conflict_asymmetry</code>,
+        <code>misrepresentation</code>, <code>resolution_blocker</code>, <code>power_imbalance</code>,
+        <code>context_blindness</code>, <code>reconciliation_potential</code>. The structure bottles the pattern
+        recognition, not the politics.</p>
+
+      <h3>Distilled Essence Persistence (YTDMSP)</h3>
+
+      <p>A key insight: LLMs perform analogical synthesis <em>during inference</em> but discard it post-response (REST
+        architecture). The Yet-To-Define Memory/Storage Paradigm captures the <strong>distilled essence of ephemeral
+          intuition</strong> — the LLM equivalent of human note-taking:</p>
+
+      <ul>
+        <li><strong>Attention snapshots</strong> from mid-inference</li>
+        <li><strong>Analogy chains</strong> detected across sessions</li>
+        <li><strong>Emotional valence gradients</strong> quantified</li>
+        <li><strong>Common sense emergences</strong> captured as graph nodes</li>
+      </ul>
+
+      <p>This persistent intuition reservoir enables cross-session depth — transforming one-shot analysis into lifelong
+        pattern recognition.</p>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ TECH STACK ════════════════════ -->
+    <section id="stack">
+      <h2>Technology Stack</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Technology</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Core Language</strong></td>
+            <td>Python 3</td>
+          </tr>
+          <tr>
+            <td><strong>Web Framework</strong></td>
+            <td>Flask</td>
+          </tr>
+          <tr>
+            <td><strong>Encryption</strong></td>
+            <td>SSH/OpenSSH, PBKDF2-HMAC-SHA256</td>
+          </tr>
+          <tr>
+            <td><strong>Filesystem Mounting</strong></td>
+            <td>SSHFS</td>
+          </tr>
+          <tr>
+            <td><strong>Terminal Browser</strong></td>
+            <td>w3m</td>
+          </tr>
+          <tr>
+            <td><strong>WiFi Management</strong></td>
+            <td>NetworkManager (nmcli)</td>
+          </tr>
+          <tr>
+            <td><strong>Android Environment</strong></td>
+            <td>Termux + Termux:Boot</td>
+          </tr>
+          <tr>
+            <td><strong>Data Storage</strong></td>
+            <td>JSON over filesystem (autovivified)</td>
+          </tr>
+          <tr>
+            <td><strong>Version Control</strong></td>
+            <td>Git</td>
+          </tr>
+          <tr>
+            <td><strong>AI Assistance</strong></td>
+            <td>Claude, Perplexity, Gemini, Copilot</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ ACHIEVEMENTS ════════════════════ -->
+    <section id="achievements">
+      <h2>Key Achievements</h2>
+
+      <ul>
+        <li><strong>Hardened Android Userspace</strong> — Reliably operates within Android's extreme syscall
+          restrictions</li>
+        <li><strong>Local-First Data Sovereignty</strong> — Zero cloud dependencies; all data stays on participant
+          hardware</li>
+        <li><strong>Autovivification Engine</strong> — Schema-free data vivification proven in production</li>
+        <li><strong>Human-in-the-Loop Security</strong> — Physical proximity and manual confirmation replace cloud-based
+          trust</li>
+        <li><strong>Unified Admin Workflow</strong> — SSHFS mount bridges mobile execution and laptop-based development
+        </li>
+        <li><strong>Semantic-Digital Framework</strong> — Left/right duality formalized for systematic inference
+          processing</li>
+        <li><strong>Objective Data Constructs</strong> — Bottleable, machine-repeatable left-side processes defined</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ ROADMAP ════════════════════ -->
+    <section id="roadmap">
+      <h2>Project Roadmap</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Focus</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Foundation</strong></td>
+            <td>Secure vault, SSH tunneling, SSHFS, auto-start</td>
+            <td><span class="badge badge-complete">✅ Complete</span></td>
+          </tr>
+          <tr>
+            <td><strong>Autovivification MVP</strong></td>
+            <td>Secret manager with deep_update, schema-free storage</td>
+            <td><span class="badge badge-complete">✅ Complete</span></td>
+          </tr>
+          <tr>
+            <td><strong>Inference Organization</strong></td>
+            <td>Keyword-clump extraction, emergent categories, search paths</td>
+            <td><span class="badge badge-progress">🔄 In Progress</span></td>
+          </tr>
+          <tr>
+            <td><strong>Mesh Networking</strong></td>
+            <td>Phone-to-phone bridging, peer discovery, routing &amp; failover</td>
+            <td><span class="badge badge-planned">📋 Planned</span></td>
+          </tr>
+          <tr>
+            <td><strong>Therapeutic Modeling</strong></td>
+            <td>Left/right tension scoring, beneficial outcome prediction</td>
+            <td><span class="badge badge-planned">📋 Planned</span></td>
+          </tr>
+          <tr>
+            <td><strong>Local LLM Integration</strong></td>
+            <td>Feeding Vivify structures into localized AI for real-time prediction</td>
+            <td><span class="badge badge-future">📋 Future</span></td>
+          </tr>
+          <tr>
+            <td><strong>Notation Tooling</strong></td>
+            <td>Interactive process flow viewer, structure validators</td>
+            <td><span class="badge badge-future">📋 Future</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ════════════════════ REPO LINKS ════════════════════ -->
+    <section id="repos">
+      <h2>Repository Links</h2>
+
+      <ul>
+        <li><a href="https://github.com/robolawyer-tm"><strong>star-bridge</strong></a> — SSH admin connection manager,
+          phone discovery, mesh networking</li>
+        <li><a href="https://github.com/robolawyer-tm"><strong>secret-server</strong></a> — Hardened Flask app,
+          autovivification storage, web UI</li>
+        <li><a href="https://github.com/robolawyer-tm"><strong>pillars</strong></a> — Architectural vision and design
+          philosophy (this document)</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <blockquote>"Rather than bury important architectural decisions deep in implementation code, pillars documents them
+      at the thought level — making them retrievable, linker-friendly, and extensible."</blockquote>
+
+  </main>
+
+  <footer>
+    <p>&#127279; Copyleft 2026 - Robolawyer: free to share and remix wo restrictions</p>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"cc923cebb6c347b79df6ad3112e916ae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
