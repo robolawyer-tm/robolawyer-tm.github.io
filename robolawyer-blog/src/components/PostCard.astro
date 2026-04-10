@@ -1,0 +1,88 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  slug: string;
+  tags?: string[];
+}
+
+const { title, description, pubDate, slug, tags = [] } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<a href={`/blog/${slug}`} class="pillar-card post-card">
+  <div class="card-header">
+    <h3>{title}</h3>
+    <span class="post-date">{formattedDate}</span>
+  </div>
+  <p class="card-description">{description}</p>
+  {tags.length > 0 && (
+    <div class="card-tags">
+      {tags.map((tag) => (
+        <span class="badge badge-planned">{tag}</span>
+      ))}
+    </div>
+  )}
+  <span class="read-more">Read post →</span>
+</a>
+
+<style>
+  .post-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .post-card:hover { text-decoration: none; }
+  .post-card:hover h3 { color: var(--accent-purple); }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    transition: color 0.2s;
+  }
+
+  .post-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+  }
+
+  .card-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .read-more {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .post-card:hover .read-more { opacity: 1; }
+</style>

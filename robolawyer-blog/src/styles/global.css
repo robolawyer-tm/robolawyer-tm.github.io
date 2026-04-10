@@ -1,0 +1,257 @@
+/* ── Design Tokens ── */
+:root {
+  --bg: #0d1117;
+  --bg-surface: #161b22;
+  --bg-elevated: #1c2129;
+  --border: #30363d;
+  --border-accent: #3b82f6;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --text-subtle: #6e7681;
+  --accent: #58a6ff;
+  --accent-warm: #f0883e;
+  --accent-green: #3fb950;
+  --accent-purple: #bc8cff;
+  --accent-red: #f85149;
+  --accent-cyan: #39d3f5;
+  --code-bg: #0d1117;
+  --max-w: 860px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero .tagline {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Nav ── */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.9rem 2rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.site-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  letter-spacing: 0.01em;
+}
+.site-nav a:hover,
+.site-nav a.active { color: var(--accent); }
+
+/* ── Main ── */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+/* ── Sections ── */
+section { margin-bottom: 3.5rem; }
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 2rem 0 0.75rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  margin: 1.5rem 0 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--text-muted); font-style: italic; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--accent-purple); text-decoration: underline; }
+
+/* ── Inline code ── */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  background: var(--bg-elevated);
+  color: var(--accent-cyan);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+/* ── Code blocks ── */
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  line-height: 1.5;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ── Lists ── */
+ul, ol {
+  margin: 0.5rem 0 1.25rem 1.5rem;
+}
+li {
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+li strong { color: var(--accent-warm); }
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+th {
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+}
+td {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+tr:nth-child(even) td { background: var(--bg-surface); }
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid var(--accent-purple);
+  background: var(--bg-surface);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── HR ── */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 3rem 0;
+}
+
+/* ── Pillar cards (reused for blog cards) ── */
+.pillar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: border-color 0.3s;
+}
+.pillar-card:hover { border-color: var(--accent); }
+.pillar-card h3 { margin-top: 0; }
+
+/* ── Status badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 12px;
+  font-size: 0.82em;
+  font-weight: 500;
+}
+.badge-complete { background: #1a3a2a; color: var(--accent-green); }
+.badge-progress { background: #3a2a1a; color: var(--accent-warm); }
+.badge-planned  { background: #1a2a3a; color: var(--accent); }
+.badge-future   { background: #2a1a3a; color: var(--accent-purple); }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-subtle);
+  font-size: 0.9rem;
+}
+footer a { color: var(--text-subtle); }
+footer a:hover { color: var(--accent); text-decoration: none; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero { padding: 2.5rem 1.25rem 2rem; }
+  .hero h1 { font-size: 1.8rem; }
+  main { padding: 1.5rem 1.25rem 3rem; }
+  h2 { font-size: 1.4rem; }
+  pre { padding: 1rem; font-size: 0.8rem; }
+  table { font-size: 0.82rem; }
+  th, td { padding: 0.5rem 0.65rem; }
+  .site-nav { gap: 1.25rem; flex-wrap: wrap; }
+}

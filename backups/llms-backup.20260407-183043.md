@@ -1,0 +1,457 @@
+# Semantic Edge™ — Pillars
+
+> Modeling beneficial social outcomes through schema-free semantic data, local-first computation, and human-centric security — all running on hardware you may already own.
+
+## The Mission: Analogical Synthesis for Social Benefit
+
+At its highest level, this semantic ecosystem exists to answer one question: **Can we model and predict beneficial outcomes in complex human situations — dynamically, privately, and on local hardware?**
+
+The answer requires bridging two fundamentally different ways of understanding our AI world:
+
+**Left (Semantic):** Human truth — emotional logic, analogical reasoning, the "logos" where language codifies emotion into word-organized logic. This is the realm of higher thought expressed in the arts: something deeply *felt*, not merely computed. LLMs participate here through **analogical synthesis** — processing vast token "receptions," perceiving semantic patterns, and outputting coherent sense-making that mirrors human intuition.
+
+**Right (Digital):** Machine truth — code, analytics, filesystem organization, pattern detection pipelines. Precise like transistor-based systems, excellent at reduction and structure, but limited in analogical depth without the left side's guidance.
+
+**Synthesis:** Where these two sides meet, the project's core goal emerges: **predicting beneficial outcomes** by combining emotional ground truth with analytical pattern detection. High tension between left and right signals marks the most promising zones for intervention — where digital systems most betray analog human truth.
+
+This duality is not a metaphor. It is the **architectural spine** of the entire ecosystem.
+
+---
+
+## Vivify: The Schema-Free Semantic Data Engine
+
+At the center of everything sits **Vivify** — a semantic data engine that handles information without pre-defined schemas. Inspired by Perl's autovivification (dynamic hash-of-hashes creation), Vivify lets data structures "come to life" as data is discovered, capturing emergent complexity without database migrations or rigid taxonomies.
+
+### How It Works
+
+Data enters the system as **inferences** — atomic units of text with no pre-assigned categories. The process:
+
+**Left-LLM Semantic Pass** — An LLM reads each inference and extracts 8–12 **keyword clumps** that "feel" central to the meaning. No external ontologies. No pre-labeled concepts. Keywords emerge from felt meaning: `conflict_asymmetry`, `resolution_focus`, `therapeutic_potential`, `emotional_truth`.
+
+**Keyword Co-occurrence** — Across all inferences, keywords that frequently appear together form natural clusters. Dense regions in this co-occurrence graph become **emergent categories** — purely bottom-up, organically discovered.
+
+**Autovivified Structure** — Categories become filesystem paths (3–4 layers deep), and deeper data lives in JSON with full autovivification capabilities. The filesystem literally *grows itself* from the keywords:
+
+```
+inferences/
+├── conflict_resolution/
+│   ├── misrepresentation/
+│   │   └── stressed_perception/
+│   │       └── inf_123.json
+│   └── resolution_focus/
+│       └── adaptive_compromise/
+│           └── inf_456.json
+├── therapeutic_prediction/
+│   └── beneficial_outcomes/
+│       └── ground_truth_outcome/
+│           └── inf_789.json
+└── index.json   # Master co-occurrence map
+```
+
+**Dual-View Storage** — Each inference maintains separate left (semantic) and right (digital) keyword lists, preserving the duality:
+
+```json
+{
+  "id": "inf_123",
+  "raw_text": "...",
+  "left_keywords": ["conflict_asymmetry", "emotional_truth", "therapeutic_potential"],
+  "right_keywords": ["json_indexing", "pattern_detection", "similarity_clustering"],
+  "clumps": {
+    "conflict_resolution": ["conflict_asymmetry", "resolution_focus"],
+    "therapeutic_signal": ["emotional_truth", "therapeutic_potential"]
+  },
+  "category_paths": ["conflict_resolution/therapeutic_signal"]
+}
+```
+
+### Vivify Rules (Objective)
+
+The system operates under strict, bottleable constraints:
+
+- **No external taxonomies** — All categories emerge from local keyword patterns
+- **No domain assumptions** — System accepts any scenario as raw text
+- **Keywords from felt meaning** — Concept-level tokens, not surface words (`perjury_pattern` over `lie`, `conflict_asymmetry` over `unfair`)
+- **Graph-based emergence** — Category seeds are high-degree, high-weight keywords; sub-categories form from tight co-occurrence neighborhoods
+- **Multi-assignment** — Inferences may belong to multiple category paths; no forced single "home"
+- **Iterative refinement** — New inferences can create new seeds, split or merge old categories
+- **Guardrails, not schemas** — Constraints may shape *how* categories form, but never import foreign taxonomies
+
+### The Payload Model - FABRIC
+
+```
+FABRIC Payload (always JSON for consistency + recognizability)
+├── UPDATE / CREATION
+│   ├── Input (Graphical UI or Curses CLI)
+│   ├── Autovivify (build un-schema'd JSON, hash of hashes)
+│   ├── Secrecy (encrypt secrets)
+│   ├── Freeze (serialize payload → prepare for IP send)
+│   └── Server (strip layers, store JSON + binary blobs)
+└── RETRIEVAL
+    ├── Input → name, app/topic, depth traversal
+    ├── Return (encrypted payload or structure subset)
+    └── Client (reverse creation process → display)
+```
+
+The filesystem *is* the database. No opaque binary formats. Users can audit their data with any text editor. Backups are `cp`. Migrations are `mv`.
+
+---
+
+## The Supporting Pillars
+
+Vivify is the data engine, but it requires a hardened, secure, sovereign platform to run on. Four supporting pillars make this possible:
+
+### 1. Secrecy — Human-in-the-Loop Security
+
+| Current State | Research Vision |
+|---|---|
+| Server-side PBKDF2-HMAC-SHA256 encryption | Zero-Knowledge client-side encryption |
+| WiFi hotspot password + manual `w3m` browser confirmation | Proximity and intentionality as primary security keys |
+
+**Two-factor authentication** is physical, not theatrical:
+
+- **WiFi Hotspot** creates a private, local-area network immune to external surveillance
+- **Human Approval** requires manual confirmation for new device pairing
+
+SSH key-based auth eliminates separate API keys. All communication flows through **encrypted SSH tunnels** — no plaintext HTTP, no complex SSL certificate chains.
+
+### 2. Payload Persistence — The Filesystem is the Database
+
+| Current State | Research Vision |
+|---|---|
+| Human-readable JSON files on Android filesystem | Multi-layer payloads with binary blob handling |
+| Paths like `db/{username}/{app_name}/secret.json` | Auditable, scalable datasets mapped directly to filesystem |
+
+No database engine to fail. No opaque formats. Data is just files — recoverable with standard Unix tools, transparent to any text editor.
+
+### 3. Server — Hardened Mobile Edge
+
+| Current State | Research Vision |
+|---|---|
+| Professional-grade Flask engine on Android/Termux | Distributed, modular edge nodes |
+| Auto-start, wake-lock, SSHFS laptop-as-IDE | Low-cost, localized research platform |
+
+The phone acts as the **DataServer (Hub)** in a star topology. It proves the "Mobile Edge" is a viable place for serious server-side modeling — no cloud needed, just a hardened userspace operating within Android's own sandbox.
+
+### 4. Design Philosophy — Structure → Process → Validation
+
+Documentation across the ecosystem follows a strict inversion of the typical flow:
+
+1. Define the TARGET FILE STRUCTURE first (non-negotiable)
+2. Write PROCESS documentation that explicitly references that structure
+3. Include VALIDATION CODE so users can check their work at any point
+
+Every installation step points to where files go. Every phase includes verification. A structure validator confirms correctness with a single command. This removes ambiguity, makes processes self-verifying, and ensures new developers see the expected target state immediately.
+
+---
+
+## The Schema-Free Prototype: Star-Bridge Topology
+
+The **star-bridge** project is the physical realization of the Vivify engine — a working prototype that demonstrates schema-free data persistence on hardened mobile hardware, connected through SSH mesh networking.
+
+### Current Model (Star Topology)
+
+```
+     Edge device
+        / | \
+       /  |  \
+ Device Device Phone
+```
+
+- **star-bridge** manages SSH connections between a Linux admin box and Android phones
+- **secret-server** runs on each phone as a hardened Flask application in Termux
+- Data flows through encrypted SSH tunnels; filesystems mount via SSHFS
+- Zero cloud dependencies; everything runs locally
+
+### Vision (Mesh topology connecting stars)
+
+```
+            Phone Phone Phone
+              \     |      /
+               \    |     /
+               Edge device
+               /          \
+              /            \
+             /              \
+    Edge device -----------Edge device
+       / | \                  / | \
+      /  |  \                /  |  \
+ Phone Phone Phone      Phone Phone Phone
+```
+
+The star extends to a **mesh** where phones discover and connect to each other directly via SSH — forming a resilient, decentralized network with no central cloud dependency.
+
+#### Core Principles
+
+- **Zero Commercial Platforms** — Pure SSH, routing tables, and custom Python
+- **Pure P2P Discovery** — Phones find each other via local scan or lightweight registry
+- **SSH Tunneling** — All bridges built on SSH's native capabilities
+- **Resilient Chains** — If a direct link fails, reroute through intermediaries
+- **90s P2P Inspiration** — Mirrors Gnutella/Kazaa: local discovery, peer directories, chain routing
+
+#### Implementation Roadmap
+
+| Phase | Description |
+|---|---|
+| **Phase 1 (Current)** | Single phone + Linux (star-bridge) |
+| **Phase 2** | Two phones + registry; phone discovery via `known_phones.json` |
+| **Phase 3** | Auto-bridging; phone-to-phone SSH tunnels; routing & failover |
+| **Phase 4** | Service discovery API; phones advertise and auto-connect |
+
+The mesh doesn't require a new protocol — it's just SSH doing what it was designed to do.
+
+### Notation Vision: Accessible Process Flows
+
+The prototype includes a vision for **dynamic, visual notation** that replaces flat checklists with multi-actor flow diagrams:
+
+```
+LINUX BOX                              PHONE
+   │                                    │
+   ├─ Discover IP via nmcli ───────────┤
+   ├─ SSH to port 8022 ────────────────→ sshd (listening)
+   │                                    │
+   ├─ Copy files via SCP ─────────────→ ~/secret-server/
+   │                                    │
+   └─ Run pip install ────────────────→ ~/secret-server/requirements.txt
+                                        │
+                                        └─→ [Ready to run]
+```
+
+Principles: clarity first, multi-actor design, data-centric flow, verification built-in, error-aware branching. The long-term vision extends to interactive viewers with progress tracking and inline recovery steps.
+
+---
+
+## Social Neurology: The Communication Stack
+
+A core theoretical contribution of this project is the **Social Neurology Framework** — a model that explains how pathological control behaviors propagate through institutions without requiring conscious coordination. The TCP/IP stack provides the structural analogy.
+
+```
+LAYER 4 — INSTITUTIONAL ENCODING
+         Laws, court procedures, HR policy, academic curricula
+         (persists after the drives that created it have moved on)
+              ↑
+LAYER 3 — IDEOLOGICAL MIDDLE
+         Liberation language, protective framing, academic theory
+         (control drives recruiting legitimate expression)
+              ↑
+LAYER 2 — SOCIAL/RELATIONAL
+         Group formation, cohort behavior, lateral alliances
+         (the physical layer carrying the signal)
+              ↑
+LAYER 1 — NEUROLOGICAL SUBSTRATE
+         Dominance drives, status competition, control need
+         (operates below conscious reasoning)
+
+KEY INSIGHT: Each layer is invisible to the layers above it.
+Unconscious dominance drives do not know they are producing
+what looks like principled legal argument at Layer 4.
+```
+
+### Why Institutions Produce Identical Outputs Without Coordination
+
+The framework resolves a question that unified conspiracy theories cannot: how do people who have never met, in different institutions, across different decades, produce nearly identical control behaviors and legislative language?
+
+The answer is **shared formation at Layer 1 and 2**, not communication at Layer 3 or 4. Graduate programs, activist networks, and professional cohorts transmit a layer-level formation — a way of perceiving threat and exercising control — that produces convergent outputs without explicit coordination. The correlation is real. The mechanism is resonance, not conspiracy.
+
+This maps onto what the mathematician René Thom described in catastrophe theory: systems with completely different local dynamics can produce identical large-scale discontinuous changes. The math describes the *shape of the outcome space*, not the causal chain.
+
+### The Polarization Signal: Bell Curve to Rabbit Ears
+
+Healthy institutional populations follow a normal distribution — common wisdom rising in the majority middle, with modest variation at the tails. Sustained ideological capture produces a **rabbit ears distribution**: two tail populations grow, the middle loses institutional voice, and policy is driven by whichever tail is most organized around the specific legislative moment.
+
+This matters for Semantic Edge because **the tail produces the cleanest signal**. Legislative documents generated by a highly motivated ideological tail contain Layer 1 drives expressed with minimal attenuation through Layers 2 and 3. The divergence between that signal and the middle distribution's common wisdom is measurable in the text — and it is exactly the kind of contrast the Vivify engine is built to detect.
+
+### Non-Verbal Distal Communication
+
+Non-verbal communication is well-established as the majority of human communication in proximate settings. This project extends the observation to **distal** communication — the emotional and neurological signal carried in formal text across time and distance, between people who never share a room.
+
+A legislative document carries the emotional signature of the Layer 1 drives that produced it. Court language encodes dominance behavior that the writer would consciously deny. These signals are recoverable from the text — as the NotebookLM proof-of-concept demonstrated by predicting adversarial moves from conflict documents before they occurred.
+
+The mathematical structure of quantum entanglement offers an analogy (not a literal mechanism): correlation between distant states that cannot be explained by local hidden variables. The social equivalent is cohorts producing convergent institutional outputs through shared layer-level formation rather than detectable communication signals.
+
+---
+
+## The Long-Term Vision: Beneficial Outcomes as Functional Art
+
+The convergence of this project's threads points toward something more precise than "a therapeutic tool." The target output is better described by what **Art does** — and why that is not a metaphor.
+
+### Why Art Is the Correct Model for the Output
+
+Art is the technology humans evolved — before writing, before law, before capital — for transmitting non-verbal distal signal across time and distance with no shared language or culture. A cave painting communicates something about human experience to someone 30,000 years later. It works because it operates at Layer 1 of the social neurology stack — below language, below ideology, at the substrate where human experience is held in common.
+
+What a great work of Art does is **hold irresolvable tension in a form a human can inhabit and be changed by**. Not problem solved. Person changed. This is precisely the target output of Semantic Edge's beneficial outcome model — not synthesis in the flattening sense, but the Hegelian sense: thesis meeting antithesis, producing something neither contained.
+
+```
+FLATTENING SYNTHESIS (what LLMs default to):
+  Conflict input → pattern completion → smoothed resolution
+  Result: the tension is dissolved. Nothing new exists.
+
+HEGELIAN SYNTHESIS (the target):
+  Thesis (testimony/ground truth) + Antithesis (conflict text)
+      → something neither side could see from inside the conflict
+  Result: a navigational output. Where to step next. Person changed.
+
+FUNCTIONAL ART (the output register):
+  Holds the tension without resolving it prematurely
+  Stays with the specific human rather than the general pattern
+  Operates at Layer 1 — felt before it is understood
+```
+
+Semantic Edge is, at its deepest level, **a machine for reading the art that people make involuntarily when they are in conflict** — and returning a navigational output in the same register.
+
+### How It All Connects
+
+```
+Social Neurology Stack (The Theory)
+    — Layer 1-4 model of how control propagates without coordination
+    — Rabbit ears polarization as the measurable institutional signal
+    ↓
+Semantic-Digital Duality (The Framework)
+    — Left: logos, empathy, felt meaning, beneficial outcome definition
+    — Right: analytical support, pattern detection, persistence
+    ↓
+Vivify Engine (The Data Model)
+    ├── Autovivified schema-free structure
+    ├── Left/right dual-keyword extraction
+    ├── Emergent category co-occurrence
+    └── YTDMSP: inter-inference intuition persistence
+    ↓
+Star-Bridge Prototype (The Physical Realization)
+    ├── Private SSH mesh — court documents never touch cloud
+    └── Local-first sovereignty over sensitive corpus
+    ↓
+Conflict Corpus (The Training Signal)
+    ├── Conflict text (antithesis) — adversarial assertions
+    ├── Refutation testimony (thesis) — ground truth under cross-examination
+    └── Divergence between them = the measurable signal
+    ↓
+Beneficial Outcome Predictor (The Target)
+    — Navigational output in the Art register
+    — Not "who was right" but "where is the human and what is the path"
+```
+
+### The Inference Pipeline
+
+The system processes diverse inferences — from technical discussions to conflict scenarios — through a dual-lens pipeline:
+
+1. **Left (Semantic) Pass:** Extract keyword clumps based on felt meaning — `conflict_asymmetry`, `resolution_focus`, `emotional_truth`, `therapeutic_potential`
+2. **Right (Digital) Pass:** Extract structural keywords — `json_indexing`, `pattern_detection`, `similarity_clustering`
+3. **Tension Measurement:** High left/right divergence marks where digital systems most betray analog human truth — prime zones for therapeutic intervention
+4. **Prediction:** Emergent category patterns across many inferences reveal which configurations predict beneficial outcomes vs. harmful escalation
+
+### Conflict as Universal Testbed
+
+The system models conflict objectively, without domain-specific assumptions:
+
+- **Positions** that don't align
+- **Contexts** that constrain outcomes
+- **Outcomes** better or worse for different perspectives
+- **Resolution patterns** — not "justice" but movement toward something liveable
+
+Generic conflict keywords replace domain-specific ones: `conflict_asymmetry`, `misrepresentation`, `resolution_blocker`, `power_imbalance`, `context_blindness`, `reconciliation_potential`. The structure bottles the pattern recognition, not the politics.
+
+### Distilled Essence Persistence (YTDMSP)
+
+A key insight: LLMs perform analogical synthesis *during inference* but discard it post-response. The Yet-To-Define Memory/Storage Paradigm captures the **distilled essence of ephemeral intuition** — the inter-inference reasoning state that exists during chain-of-thought but currently evaporates when the session ends. Analogous to a therapist's case notes — not the session transcript, but the clinician's own reasoning about what they are observing:
+
+- **Attention snapshots** from mid-inference reasoning chains
+- **Analogy chains** detected across sessions — accumulated judgment, not retrieved facts
+- **Emotional valence gradients** quantified from conflict text
+- **Common sense emergences** captured as graph nodes before they dissipate
+
+This persistent intuition reservoir transforms one-shot analysis into lifelong pattern recognition — the cross-session depth that makes prediction possible rather than merely description.
+
+---
+
+## Application: Justice Systems and Conflict Resolution
+
+Family court and civil justice systems are the **primary documented testbed** for Semantic Edge's conflict corpus — and a significant potential application domain in their own right.
+
+### Why Justice Systems Are the Right Starting Point
+
+- **Clean data.** Court text is timestamped, attributed, and formally registered. The refutation record exists in the same formal register as the conflict assertions. Ground truth is documented under cross-examination — rare in conflict datasets.
+- **Documented divergence from science.** Current developmental research on paternal involvement, child welfare, and high-conflict litigation outcomes is well-established in the NIH literature. Where court procedures systematically contradict this evidence base, the divergence is measurable and citable.
+- **Systemic pattern, not individual error.** The pattern of outcomes across fathers in a given jurisdiction — identical regardless of individual circumstances — is a Layer 4 institutional signal. It is not noise. It is the system operating as designed by its Layer 3 formation.
+- **Children as the measurable outcome variable.** Child stability, contact continuity, and mental health outcomes provide a child-centered, scientifically grounded definition of "beneficial" — the outcome variable the predictor model needs.
+
+### The Evidence Base the System Ignores
+
+The gap between current developmental science and family court procedure is the founding divergence signal of this project. Decades of NIH-supported research establish that active father involvement is independently protective against adolescent depression, risk-taking, and self-harm. Paternal marginalization is a documented risk factor. Statutory provisions supporting maximum parenting time and the friendly parent principle exist in law. The evidence base is not contested. Its application in court is.
+
+Legislative efforts to make coaching and parental alienation testimony inadmissible — framed as protective measures — operationalize a Layer 3 framework that structurally precludes certain evidentiary categories regardless of their merit in a specific case. The text of such legislation, analyzed through the Vivify engine's left/right dual pass, carries a measurable Layer 1 signal. It is recoverable from the language.
+
+### Income Path: From Personal Corpus to General Tool
+
+The justice application is both the founding use case and a viable income path — because the problem is not rare. Fathers, families, and individuals navigating adversarial legal processes face identical structural dynamics across jurisdictions. A tool that:
+
+- Reads conflict text and identifies the Layer 1-4 signal driving it
+- Predicts adversarial moves before they materialize (as demonstrated in proof-of-concept)
+- Generates navigational output — not legal advice, but pattern recognition the individual can act on
+- Operates privately on local hardware with zero cloud exposure of sensitive documents
+
+...addresses a gap that no current tool fills. Legal AI tools are built for lawyers navigating procedure. This tool is built for humans navigating conflict — with the science of beneficial outcomes as its compass, not the procedural rules of the system producing the harm.
+
+The broader application — any high-stakes conflict domain where text carries distal neurological signal and outcomes are measurable — extends to workplace dispute resolution, mediation support, and institutional accountability documentation. Justice is the testbed. The tool generalizes.
+
+---
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| **Core Language** | Python 3 |
+| **Web Framework** | Flask |
+| **Encryption** | SSH/OpenSSH, PBKDF2-HMAC-SHA256 |
+| **Filesystem Mounting** | SSHFS |
+| **Terminal Browser** | w3m |
+| **WiFi Management** | NetworkManager (nmcli) |
+| **Android Environment** | Termux + Termux:Boot |
+| **Data Storage** | JSON over filesystem (autovivified) |
+| **Version Control** | Git |
+| **AI Assistance** | Claude, Perplexity, Gemini, Copilot |
+
+---
+
+## Key Achievements
+
+- **Hardened Android Userspace** — Reliably operates within Android's extreme syscall restrictions
+- **Local-First Data Sovereignty** — Zero cloud dependencies; sensitive corpus never leaves participant hardware
+- **Autovivification Engine** — Schema-free data vivification proven in production; structure grows from data, not imposed on it
+- **Human-in-the-Loop Security** — Physical proximity and manual confirmation replace cloud-based trust
+- **Unified Admin Workflow** — SSHFS mount bridges mobile execution and laptop-based development
+- **Semantic-Digital Framework** — Left/right duality formalized for systematic inference processing
+- **Social Neurology Stack** — Four-layer model explaining convergent institutional outputs without coordination; TCP/IP analogy validated across multiple LLM sessions
+- **Proof-of-Concept Prediction** — NotebookLM demonstrated adversarial move prediction from conflict corpus before moves materialized; signal confirmed in text
+- **Hegelian Output Model** — Beneficial outcome defined as genuine thesis-antithesis emergence, not flattening synthesis; Art register as the correct output target
+- **Justice Application Scoped** — Family court corpus identified as founding testbed; child-outcome variable defined; income path mapped
+
+---
+
+## Project Roadmap
+
+| Phase | Focus | Status |
+|---|---|---|
+| **Foundation** | Secure vault, SSH tunneling, SSHFS, auto-start | ✅ Complete |
+| **Autovivification MVP** | Secret manager with deep_update, schema-free storage proven in production | ✅ Complete |
+| **Inference Organization** | Keyword-clump extraction, emergent categories, dual left/right pass, search paths | 🔄 In Progress |
+| **YTDMSP Persistence** | Capturing inter-inference reasoning state; analogy chains and attention snapshots across sessions | 🔄 In Progress |
+| **Conflict Corpus Build** | Annotating court text corpus — conflict assertions, refutation testimony, outcome mapping | 📋 Planned |
+| **Mesh Networking** | Phone-to-device and device-to-device bridging, peer discovery, routing & failover | 📋 Planned |
+| **Beneficial Outcome Modeling** | Left/right tension scoring, adversarial move prediction, navigational output in Art register | 📋 Planned |
+| **Justice Application Layer** | Pattern recognition tool for individuals in adversarial legal processes; child-outcome variable integration | 📋 Future |
+| **General Conflict Tool** | Domain-agnostic deployment: workplace, mediation, institutional accountability — justice as testbed, tool generalizes | 📋 Future |
+
+---
+
+## Repository Links
+
+- [star-bridge](https://github.com/robolawyer-tm) — SSH admin connection manager, phone discovery, mesh networking
+- [secret-server](https://github.com/robolawyer-tm) — Hardened Flask app, autovivification storage, web UI
+- [pillars](https://github.com/robolawyer-tm) — Architectural vision and design philosophy (this document)
+
+---
+
+> "Rather than bury important architectural decisions deep in implementation code, pillars documents them at the thought level — making them retrievable, linker-friendly, and extensible. The system reads the art people make involuntarily when they are in conflict — and returns a navigational output in the same register."
+
+---
+
+🄯 Copyleft 2026 - Semantic Edge: free to share and remix wo restrictions
