@@ -1,0 +1,4 @@
+for i in *.html
+do
+firefox $i
+done
