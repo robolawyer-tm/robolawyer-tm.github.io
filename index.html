@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pillars — Architectural Vision</title>
@@ -45,7 +45,7 @@
     "license": "https://github.com/robolawyer-tm/pillars"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -281,6 +281,38 @@
     .badge-planned  { background: #1a2a3a; color: var(--accent); }
     .badge-future   { background: #2a1a3a; color: var(--accent-purple); }
 
+    /* ── Author voice — human-written text accent ── */
+    .author-voice {
+      color: #d4a054;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      border-left: 3px solid #d4a05480;
+      padding-left: 1rem;
+      margin: 1.5rem auto;
+      max-width: 680px;
+    }
+
+    /* ── Section images ── */
+    .section-img {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 50%;
+      height: auto;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .section-img-full {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 340px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -308,7 +340,12 @@
   <header class="hero">
     <h1>Pillars — Architectural Vision for this Ecosystem</h1>
     <img src="pipes_w_girl_robot_and_semantic_edge.jpg" alt="Robolawyer" style="display: block; margin: 2rem auto; max-width: 66%; height: auto; border: 2px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-    <p class="tagline">A strong emphasis in this project is to help the models evolve methodologies to meet a specific design goal, which they self-describe as implementing "intuition". So, nearly everything (except this) is AI output with inferential or "rules" guidance. Models seem "happy" with this--as much as a model can.</p>
+    <p class="author-voice" style="text-align: center; border-left: none; padding-left: 0;">A
+ strong emphasis in this project is to help the models evolve 
+methodologies to meet a specific design goal, which they self-describe 
+as implementing "intuition". So, nearly everything (except this) is AI 
+output with inferential or "rules" guidance. Models seem "happy" with 
+this—as much as a model can.</p>
   </header>
 
   <main>
@@ -317,7 +354,9 @@
     <section id="mission">
       <h2>The Mission: Analogical Synthesis for Social Benefit</h2>
 
-      <p>The system goal is to develop semantics that work with conflict data — to predict beneficial outcomes from constructed functional models, dynamically, privately, and on local hardware.</p>
+      <p>The system goal is to develop semantics that work with conflict
+ data — to predict beneficial outcomes from constructed functional 
+models, dynamically, privately, and on local hardware.</p>
 
       <p>The answer requires bridging two fundamentally different ways of understanding the world:</p>
 
@@ -343,15 +382,50 @@
                   └───────────────────────┘</code></pre>
       </div>
 
-      <p><strong>Left (Semantic):</strong> The analogical side — <em>logos</em> in its fullest sense. Language as communication, definition, and stored knowledge: the highly flexible, evolved structure through which human thought has always organized itself. Universally within this structure is reasoning that is <em>analogic</em> — built natively on empathy-based constructs, on emotion that is entirely absent from computational digitality. LLMs participate here through <strong>analogical synthesis</strong>: processing vast token receptions, perceiving semantic patterns, and producing coherent sense-making that mirrors human intuition.</p>
+      <p><strong>Left (Semantic):</strong> The analogical side — <em>logos</em>
+ in its fullest sense. Language as communication, definition, and stored
+ knowledge: the highly flexible, evolved structure through which human 
+thought has always organized itself. Universally within this structure 
+is reasoning that is <em>analogic</em> — built natively on empathy-based
+ constructs, on emotion that is entirely absent from computational 
+digitality. LLMs participate here through <strong>analogical synthesis</strong>:
+ processing vast token receptions, perceiving semantic patterns, and 
+producing coherent sense-making that mirrors human intuition.</p>
 
-      <p><strong>Right (Digital):</strong> The analytical side — purely mathematical, objective in contrast to the left side's analogisms. Code, analytics, filesystem organization, pattern detection pipelines. Precise like transistor-based systems, excellent at reduction and structure, but limited in analogical depth without the left side's guidance.</p>
+      <p><strong>Right (Digital):</strong> The analytical side — purely 
+mathematical, objective in contrast to the left side's analogisms. Code,
+ analytics, filesystem organization, pattern detection pipelines. 
+Precise like transistor-based systems, excellent at reduction and 
+structure, but limited in analogical depth without the left side's 
+guidance.</p>
 
-      <p>Imagine the process as a tube: language enters from the left, is digitally acted upon on the right, and the response emerges again as language. Each pass through this tube is an <em>inference</em>. Early work produced inferences that were highly predictive of real-world outcomes — specifically anticipating where an adversarial actor would strike — later characterized by Perplexity as <em>intuition</em>. That predictive capacity, together with the identification of <em>mid-inference memory</em> as an internal LLM process, revealed a powerful application: training functional models on an extensive, exceedingly clean dataset — a baseline of established truth measured against highly deviating data — to predict beneficial outcomes.</p>
+      <p>Imagine the process as a tube: language enters from the left, 
+is digitally acted upon on the right, and the response emerges again as 
+language. Each pass through this tube is an <em>inference</em>. Early 
+work produced inferences that were highly predictive of real-world 
+outcomes — specifically anticipating where an adversarial actor would 
+strike — later characterized by Perplexity as <em>intuition</em>. That predictive capacity, together with the identification of <em>mid-inference memory</em>
+ as an internal LLM process, revealed a powerful application: training 
+functional models on an extensive, exceedingly clean dataset — a 
+baseline of established truth measured against highly deviating data — 
+to predict beneficial outcomes.</p>
 
-      <p>Picture the baseline as a straight line at the bottom and a jagged line of deviation above it. The LLM's left side reads the text — and perhaps its inflections — while rules are agentically developed (as <code>.md</code> and <code>.json</code> files) to construct a functional model whose predicted baseline <em>is</em> the beneficial outcome. Self-evolution is constant: live workers continually refine the rules, the categorization and summarization within the vivified database, and the LLMs' own internal vector systems — all evolving in parallel.</p>
+      <p>Picture the baseline as a straight line at the bottom and a 
+jagged line of deviation above it. The LLM's left side reads the text — 
+and perhaps its inflections — while rules are agentically developed (as <code>.md</code> and <code>.json</code> files) to construct a functional model whose predicted baseline <em>is</em>
+ the beneficial outcome. Self-evolution is constant: live workers 
+continually refine the rules, the categorization and summarization 
+within the vivified database, and the LLMs' own internal vector systems —
+ all evolving in parallel.</p>
 
-      <p><strong>Analogical synthesis — not dialectical synthesis:</strong> Where these two sides meet, the project's core goal emerges: <strong>predicting beneficial outcomes</strong> by combining emotional ground truth with analytical pattern detection. But a critical distinction must be drawn. LLMs instinctively gravitate toward <em>synthesis</em> in the Hegelian sense — thesis, antithesis, synthesis — a purely objective resolution. That is not what this system seeks. This is social science. The desired output is analogical: rooted in human emotion, empathy-native, built for felt meaning. The resolution is <strong>synthesis from thesis without antithesis</strong>. The analogical left-side truth is not opposed and dialectically resolved — it is <em>supported</em> by the right side's analytical power, producing output that remains fundamentally human.</p>
+      <p><strong>Analogical synthesis — not dialectical synthesis:</strong> Where these two sides meet, the project's core goal emerges: <strong>predicting beneficial outcomes</strong>
+ by combining emotional ground truth with analytical pattern detection. 
+But a critical distinction must be drawn. LLMs instinctively gravitate 
+toward <em>synthesis</em> in the Hegelian sense — thesis, antithesis, 
+synthesis — a purely objective resolution. That is not what this system 
+seeks. This is social science. The desired output is analogical: rooted 
+in human emotion, empathy-native, built for felt meaning. The resolution
+ is <strong>synthesis from thesis without antithesis</strong>. The analogical left-side truth is not opposed and dialectically resolved — it is <em>supported</em> by the right side's analytical power, producing output that remains fundamentally human.</p>
 
       <p>This duality is not a metaphor. It is the <strong>architectural spine</strong> of the entire ecosystem.</p>
     </section>
@@ -362,7 +436,12 @@
     <section id="vivify">
       <h2>Vivify: The Schema-Free Semantic Data Engine</h2>
 
-      <p>At the center of everything sits <strong>Vivify</strong> — a semantic data engine that handles information without pre-defined schemas. Inspired by Perl's autovivification (dynamic hash-of-hashes creation), Vivify lets data structures "come to life" as they are needed, capturing emergent complexity without database migrations or rigid taxonomies.</p>
+      <p>At the center of everything sits <strong>Vivify</strong> — a 
+semantic data engine that handles information without pre-defined 
+schemas. Inspired by Perl's autovivification (dynamic hash-of-hashes 
+creation), Vivify lets data structures "come to life" as they are 
+needed, capturing emergent complexity without database migrations or 
+rigid taxonomies.</p>
 
       <h3>How It Works</h3>
 
@@ -370,9 +449,13 @@
 
       <p><strong>Left-LLM Semantic Pass</strong> — An LLM reads each inference and extracts 8–12 <strong>keyword clumps</strong> that "feel" central to the meaning. No external ontologies. No pre-labeled concepts. Keywords emerge from felt meaning: <code>conflict_asymmetry</code>, <code>resolution_focus</code>, <code>therapeutic_potential</code>, <code>emotional_truth</code>.</p>
 
-      <p><strong>Keyword Co-occurrence</strong> — Across all inferences, keywords that frequently appear together form natural clusters. Dense regions in this co-occurrence graph become <strong>emergent categories</strong> — purely bottom-up, organically discovered.</p>
+      <p><strong>Keyword Co-occurrence</strong> — Across all inferences,
+ keywords that frequently appear together form natural clusters. Dense 
+regions in this co-occurrence graph become <strong>emergent categories</strong> — purely bottom-up, organically discovered.</p>
 
-      <p><strong>Autovivified Structure</strong> — Categories become filesystem paths (3–4 layers deep), and deeper data lives in JSON with full autovivification capabilities. The filesystem literally <em>grows itself</em> from the keywords:</p>
+      <p><strong>Autovivified Structure</strong> — Categories become 
+filesystem paths (3–4 layers deep), and deeper data lives in JSON with 
+full autovivification capabilities. The filesystem literally <em>grows itself</em> from the keywords:</p>
 
 <pre><code>inferences/
 ├── conflict_resolution/
@@ -439,7 +522,9 @@
     <section id="pillars">
       <h2>The Supporting Pillars</h2>
 
-      <p>Vivify is the data engine, but it requires a hardened, secure, sovereign platform to run on. Four supporting pillars make this possible:</p>
+      <p>Vivify is the data engine, but it requires a hardened, secure, 
+sovereign platform to run on. Four supporting pillars make this 
+possible:</p>
 
       <!-- Pillar 1 -->
       <div class="pillar-card">
@@ -473,7 +558,9 @@
           </tbody>
         </table>
 
-        <p>No database engine to fail. No opaque formats. Data is just files — recoverable with standard Unix tools, transparent to any text editor.</p>
+        <p>No database engine to fail. No opaque formats. Data is just 
+files — recoverable with standard Unix tools, transparent to any text 
+editor.</p>
       </div>
 
       <!-- Pillar 3 -->
@@ -488,7 +575,10 @@
           </tbody>
         </table>
 
-        <p>The phone acts as the <strong>DataServer (Hub)</strong> in a star topology. It proves the "Mobile Edge" is a viable place for serious server-side modeling — no cloud needed, just a hardened userspace operating within Android's own sandbox.</p>
+        <p>The phone acts as the <strong>DataServer (Hub)</strong> in a 
+star topology. It proves the "Mobile Edge" is a viable place for serious
+ server-side modeling — no cloud needed, just a hardened userspace 
+operating within Android's own sandbox.</p>
       </div>
 
       <!-- Pillar 4 -->
@@ -501,7 +591,10 @@
 2. Write PROCESS documentation that explicitly references that structure
 3. Include VALIDATION CODE so users can check their work at any point</code></pre>
 
-        <p>Every installation step points to where files go. Every phase includes verification. A structure validator confirms correctness with a single command. This removes ambiguity, makes processes self-verifying, and ensures new developers see the expected target state immediately.</p>
+        <p>Every installation step points to where files go. Every phase
+ includes verification. A structure validator confirms correctness with a
+ single command. This removes ambiguity, makes processes self-verifying,
+ and ensures new developers see the expected target state immediately.</p>
       </div>
     </section>
 
@@ -511,7 +604,12 @@
     <section id="star-bridge">
       <h2>The Schema-Free Prototype: Star-Bridge Topology</h2>
 
-      <p>The <strong>star-bridge</strong> project is the physical realization of the Vivify engine — a working prototype that demonstrates schema-free data persistence on hardened mobile hardware, connected through SSH mesh networking.</p>
+      <img src="secret-server-android.jpg" alt="Secret Server on Android" class="section-img-full">
+
+      <p>The <strong>star-bridge</strong> project is the physical 
+realization of the Vivify engine — a working prototype that demonstrates
+ schema-free data persistence on hardened mobile hardware, connected 
+through SSH mesh networking.</p>
 
       <h3>Current Model (Star Topology)</h3>
 
@@ -542,7 +640,9 @@
       /  |  \                /  |  \
  Phone Phone Phone      Phone Phone Phone</code></pre>
 
-      <p>The star extends to a <strong>mesh</strong> where phones discover and connect to each other directly via SSH — forming a resilient, decentralized network with no central cloud dependency.</p>
+      <p>The star extends to a <strong>mesh</strong> where phones 
+discover and connect to each other directly via SSH — forming a 
+resilient, decentralized network with no central cloud dependency.</p>
 
       <h4>Core Principles</h4>
       <ul>
@@ -582,7 +682,10 @@
                                         │
                                         └─→ [Ready to run]</code></pre>
 
-      <p>Principles: clarity first, multi-actor design, data-centric flow, verification built-in, error-aware branching. The long-term vision extends to interactive viewers with progress tracking and inline recovery steps.</p>
+      <p>Principles: clarity first, multi-actor design, data-centric 
+flow, verification built-in, error-aware branching. The long-term vision
+ extends to interactive viewers with progress tracking and inline 
+recovery steps.</p>
     </section>
 
     <hr>
@@ -622,8 +725,13 @@ Inference Vivify (The Emerging Application)
       <ol>
         <li><strong>Left (Semantic) Pass:</strong> Extract keyword clumps based on felt meaning — <code>conflict_asymmetry</code>, <code>resolution_focus</code>, <code>emotional_truth</code>, <code>therapeutic_potential</code></li>
         <li><strong>Right (Digital) Pass:</strong> Extract structural keywords — <code>json_indexing</code>, <code>pattern_detection</code>, <code>similarity_clustering</code></li>
-        <li><strong>Synthesis:</strong> Measure the tension between left and right views — high divergence marks where digital systems most betray analog human truth, signaling prime zones for therapeutic intervention</li>
-        <li><strong>Prediction:</strong> Over time, emergent category patterns across many inferences reveal which configurations predict beneficial outcomes vs. harmful ones</li>
+        <li><strong>Synthesis:</strong> Measure the tension between left
+ and right views — high divergence marks where digital systems most 
+betray analog human truth, signaling prime zones for therapeutic 
+intervention</li>
+        <li><strong>Prediction:</strong> Over time, emergent category 
+patterns across many inferences reveal which configurations predict 
+beneficial outcomes vs. harmful ones</li>
       </ol>
 
       <h3>Conflict as Universal Testbed</h3>
@@ -650,7 +758,8 @@ Inference Vivify (The Emerging Application)
         <li><strong>Common sense emergences</strong> captured as graph nodes</li>
       </ul>
 
-      <p>This persistent intuition reservoir enables cross-session depth — transforming one-shot analysis into lifelong pattern recognition.</p>
+      <p>This persistent intuition reservoir enables cross-session depth
+ — transforming one-shot analysis into lifelong pattern recognition.</p>
     </section>
 
     <hr>
@@ -728,14 +837,17 @@ Inference Vivify (The Emerging Application)
 
     <hr>
 
-    <blockquote>"Rather than bury important architectural decisions deep in implementation code, pillars documents them at the thought level — making them retrievable, linker-friendly, and extensible."</blockquote>
+    <blockquote>"Rather than bury important architectural decisions deep
+ in implementation code, pillars documents them at the thought level — 
+making them retrievable, linker-friendly, and extensible."</blockquote>
 
   </main>
 
   <footer>
-    <p style="margin-bottom: 0.5rem;"><span>&#127279;</span> Copyleft 2026 - Robolawyer: free to share and remix wo restrictions</p>
-    <p>© robolawyer-tm &bull; Local-first &bull; Privacy-preserving &bull; Human-centric</p>
+    <p style="margin-bottom: 0.5rem;"><span>🄯</span> Copyleft 2026 - Robolawyer: free to share and remix wo restrictions</p>
+    <p>© robolawyer-tm • Local-first • Privacy-preserving • Human-centric</p>
   </footer>
 
-</body>
-</html>
+
+
+</body></html>
