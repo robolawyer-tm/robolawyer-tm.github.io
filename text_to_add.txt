@@ -1,1 +1,0 @@
-A strong emphasis in this project is to help the models evolve methodologies to meet a specific design goal, which they self-describe as implementing "intuition". So, nearly everything (except this) is AI output with inferential or "rules" guidance. Models seem "happy" with this--as much as a model can.
