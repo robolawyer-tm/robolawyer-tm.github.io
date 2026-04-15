@@ -1,0 +1,28 @@
+title: robolawyer-tm
+description: Modeling beneficial outcomes through semantic edge computing — local-first, privacy-preserving, human-centric.
+url: "https://robolawyer-tm.github.io"
+baseurl: ""
+
+theme: minima
+
+author:
+  name: robolawyer-tm
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: robolawyer-tm
+
+exclude:
+  - "Pillars — Architectural Vision_files"
+  - "*.txt"
+  - "sitemap.xml"
+  - "robots.txt"
