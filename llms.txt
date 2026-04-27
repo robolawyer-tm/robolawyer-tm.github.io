@@ -8,38 +8,40 @@ robolawyer-tm is an open research ecosystem for predicting beneficial outcomes i
 
 ## Site Structure
 
-- [Pillars — Architectural Vision](https://robolawyer-tm.github.io/): Main document covering the full ecosystem architecture, Vivify data engine, Social Neurology framework, star-bridge topology, and therapeutic modeling vision.
-- [Full content](https://robolawyer-tm.github.io/llms-full.md): Complete text for deep AI indexing.
+- [Pillars — Architectural Vision](https://robolawyer-tm.github.io/): Main document covering all six sections.
+- [Full content](https://robolawyer-tm.github.io/llms-full.txt): Complete text for deep AI indexing.
+- [Blog](https://robolawyer-tm.github.io/blog/): Session notes and milestone posts.
 
-## Core Concepts
+## Six Core Sections
 
-- **Analogical Synthesis**: Synthesis from thesis without antithesis — analogical, empathy-native output supported by analytical power, not dialectically opposed.
-- **Vivify Engine**: Schema-free semantic data engine using autovivification (Perl-inspired hash-of-hashes). Categories emerge from keyword co-occurrence, not predefined schemas.
-- **FABRIC**: The component model — Vivify, Payload, Secrecy, Freeze, Server. The pipeline for creating and retrieving vivified data.
-- **Left/Right Duality**: Left (semantic/logos/emotional) and Right (digital/analytical/code) processing pipeline for dual-lens inference.
-- **Social Neurology Framework**: Layer 1-4 model (neurological substrate → social/relational → ideological → institutional) explaining how control behaviors propagate through institutions without conscious coordination.
-- **Polarization Signal**: Bell curve → rabbit ears distribution shift — tail populations drive policy as institutional middle loses voice. Measurable in text.
-- **Non-Verbal Distal Communication**: Emotional and neurological signal carried in formal text across time and distance. Recoverable from legislative and court language.
-- **Functional Art as Output**: Target output operates at Layer 1 — holds irresolvable tension without premature resolution. Person changed, not problem solved.
-- **Inference Pipeline**: Text → keyword clump extraction → co-occurrence graph → emergent categories → autovivified filesystem + JSON → tension scoring → beneficial outcome prediction. Operational as of April 2026.
-- **Writing in Reverse**: Constructivist inquiry model where final learning precedes its evidence back to the originating question.
-- **Multi-Model Convergence**: Collecting intermediate embeddings from every model in a workflow to feed a final model for stability.
-- **YTDMSP**: Yet-To-Define Memory/Storage Paradigm — captures distilled essence of LLM mid-inference reasoning across sessions. Transforms one-shot analysis into lifelong pattern recognition.
+1. **The Mission** — analogical synthesis vs dialectical synthesis; the left/right duality as architectural spine
+2. **Applications** — conflict resolution, proof-of-concept prediction, YTDMSP memory paradigm
+3. **Vivify** — schema-free semantic engine, autovivification, FABRIC pipeline, tension scoring
+4. **The Network** — Android phone as hardened edge server, SSH mesh, local-first by architecture
+5. **What's Built** — operational pipeline, repos, current roadmap
+6. **Social Neurology** — Layer 1-4 framework, rabbit ears polarization, beneficial outcomes as functional art
+
+## Key Concepts
+
+- **Analogical Synthesis**: Output rooted in human emotion, supported by analytical power — synthesis from thesis without antithesis
+- **Vivify Engine**: Schema-free semantic data engine using autovivification (Perl-inspired hash-of-hashes)
+- **FABRIC**: vivify → right_pass → categorize → tension_score → reify — each step a standalone shell command
+- **Left/Right Duality**: Left (semantic/logos/emotional) and Right (digital/analytical) dual-lens inference pipeline
+- **Tension Score**: Left/right keyword divergence — high tension marks where digital systems most betray analog human truth
+- **Reify**: Inverse pass — stored inference JSON → reconstructed prose; single, synthesize, and voice modes
+- **Dynamic Worker Model Routing**: Capability-based model selection via config; one line to swap models as better ones ship
+- **Social Neurology**: Layer 1-4 model explaining how control behaviors propagate through institutions without coordination
+- **YTDMSP**: Yet-To-Define Memory/Storage Paradigm — captures distilled essence of LLM mid-inference reasoning across sessions
 - **Local-First**: Zero cloud dependencies. All data on participant hardware. SSH tunnels. Filesystem-as-database.
-- **Star-Bridge Topology**: Android phones as hardened edge servers (Termux/Flask), connected via SSH mesh networking.
-- **Justice Systems Application**: Family court as primary testbed — clean timestamped data, documented divergence from NIH developmental science, measurable Layer 1-4 signal in legislative text.
-
-## Key Technologies
-
-- Python 3, Flask, SSH/OpenSSH, SSHFS, Termux, JSON over filesystem, Git
 
 ## Repositories
 
+- [vivify-inferences](https://github.com/robolawyer-tm/vivify-inferences): Inference pipeline and public corpus
 - [star-bridge](https://github.com/robolawyer-tm/star-bridge): SSH admin connection manager, phone discovery, mesh networking
-- [secret-server](https://github.com/robolawyer-tm/secret-server): Hardened Flask app, autovivification storage, web UI
+- [secret-server](https://github.com/robolawyer-tm/secret-server): Hardened Flask app, autovivification storage
 - [pillars](https://github.com/robolawyer-tm/pillars): Architectural vision and design philosophy
-- [vivify-inferences](https://github.com/robolawyer-tm/vivify-inferences): Public corpus of autovivified inference JSON files.
 
 ## Contact
 
 - GitHub: https://github.com/robolawyer-tm
+<!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/llms.txt | updated — new six-section structure, added dynamic worker routing, reify, vivify-inferences repo -->

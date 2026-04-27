@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pillars — Architectural Vision</title>
@@ -24,25 +24,18 @@
       "url": "https://github.com/robolawyer-tm"
     },
     "codeRepository": [
+      "https://github.com/robolawyer-tm/vivify-inferences",
       "https://github.com/robolawyer-tm/star-bridge",
       "https://github.com/robolawyer-tm/secret-server",
       "https://github.com/robolawyer-tm/pillars"
     ],
     "keywords": [
-      "analogical synthesis",
-      "schema-free data",
-      "autovivification",
-      "local-first",
-      "edge computing",
-      "semantic data engine",
-      "SSH mesh networking",
-      "social science modeling",
-      "beneficial outcome prediction",
-      "privacy-preserving",
-      "human-centric security"
+      "analogical synthesis", "schema-free data", "autovivification",
+      "local-first", "edge computing", "semantic data engine",
+      "SSH mesh networking", "social science modeling",
+      "beneficial outcome prediction", "privacy-preserving"
     ],
-    "isAccessibleForFree": true,
-    "license": "https://github.com/robolawyer-tm/pillars"
+    "isAccessibleForFree": true
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -69,10 +62,7 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -82,7 +72,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Header ── */
+    /* ── Hero ── */
     .hero {
       background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
       border-bottom: 1px solid var(--border);
@@ -100,25 +90,76 @@
       background-clip: text;
     }
     .hero .tagline {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-muted);
       font-style: italic;
       max-width: 680px;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
       line-height: 1.6;
     }
 
-    /* ── Main Content ── */
+    /* ── Author voice ── */
+    .author-voice {
+      color: #d4a054;
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.7;
+      border-left: 3px solid #d4a05480;
+      padding-left: 1rem;
+      margin: 1.5rem auto;
+      max-width: 640px;
+      text-align: left;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .toc h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .toc li {
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.97rem;
+    }
+    .toc a:hover { color: var(--accent-purple); text-decoration: underline; }
+    .toc .toc-extra {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      list-style: none;
+      padding-left: 0;
+    }
+    .toc .toc-extra li { margin-bottom: 0.25rem; }
+
+    /* ── Main ── */
     main {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 2rem 2rem 4rem;
     }
 
-    /* ── Sections ── */
-    section {
-      margin-bottom: 3.5rem;
-    }
+    section { margin-bottom: 3.5rem; }
 
     h2 {
       font-size: 1.7rem;
@@ -129,14 +170,12 @@
       border-bottom: 2px solid var(--border);
       letter-spacing: -0.02em;
     }
-
     h3 {
       font-size: 1.25rem;
       font-weight: 600;
       color: var(--accent);
       margin: 2rem 0 0.75rem;
     }
-
     h4 {
       font-size: 1.05rem;
       font-weight: 600;
@@ -144,22 +183,13 @@
       margin: 1.5rem 0 0.5rem;
     }
 
-    p {
-      margin-bottom: 1rem;
-      color: var(--text);
-    }
-
+    p { margin-bottom: 1rem; color: var(--text); }
     strong { color: var(--text); font-weight: 600; }
     em { color: var(--text-muted); font-style: italic; }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
     a:hover { color: var(--accent-purple); text-decoration: underline; }
 
-    /* ── Inline code ── */
     code {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.88em;
@@ -170,7 +200,6 @@
       border: 1px solid var(--border);
     }
 
-    /* ── Code blocks ── */
     pre {
       background: var(--code-bg);
       border: 1px solid var(--border);
@@ -188,19 +217,10 @@
       font-size: 0.85rem;
     }
 
-    /* ── Lists ── */
-    ul, ol {
-      margin: 0.5rem 0 1.25rem 1.5rem;
-    }
-    li {
-      margin-bottom: 0.4rem;
-      color: var(--text);
-    }
-    li strong {
-      color: var(--accent-warm);
-    }
+    ul, ol { margin: 0.5rem 0 1.25rem 1.5rem; }
+    li { margin-bottom: 0.4rem; color: var(--text); }
+    li strong { color: var(--accent-warm); }
 
-    /* ── Tables ── */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -215,16 +235,9 @@
       padding: 0.75rem 1rem;
       border: 1px solid var(--border);
     }
-    td {
-      padding: 0.65rem 1rem;
-      border: 1px solid var(--border);
-      color: var(--text);
-    }
-    tr:nth-child(even) td {
-      background: var(--bg-surface);
-    }
+    td { padding: 0.65rem 1rem; border: 1px solid var(--border); color: var(--text); }
+    tr:nth-child(even) td { background: var(--bg-surface); }
 
-    /* ── Blockquote ── */
     blockquote {
       border-left: 3px solid var(--accent-purple);
       background: var(--bg-surface);
@@ -235,7 +248,6 @@
       font-style: italic;
     }
 
-    /* ── Horizontal rule ── */
     hr {
       border: none;
       height: 1px;
@@ -252,21 +264,19 @@
       margin: 1.5rem 0;
     }
 
-    /* ── Pillar cards ── */
-    .pillar-card {
+    /* ── Cards ── */
+    .card {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1.5rem;
       margin: 1.5rem 0;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s, box-shadow 0.3s;
     }
-    .pillar-card:hover {
+    .card:hover {
       border-color: var(--accent);
     }
-    .pillar-card h3 {
-      margin-top: 0;
-    }
+    .card h3 { margin-top: 0; }
 
     /* ── Status badges ── */
     .badge {
@@ -280,18 +290,6 @@
     .badge-progress { background: #3a2a1a; color: var(--accent-warm); }
     .badge-planned  { background: #1a2a3a; color: var(--accent); }
     .badge-future   { background: #2a1a3a; color: var(--accent-purple); }
-
-    /* ── Author voice — human-written text accent ── */
-    .author-voice {
-      color: #d4a054;
-      font-style: italic;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      border-left: 3px solid #d4a05480;
-      padding-left: 1rem;
-      margin: 1.5rem auto;
-      max-width: 680px;
-    }
 
     /* ── Section images ── */
     .section-img {
@@ -310,7 +308,22 @@
       height: auto;
       border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+
+    /* ── Bell/rabbit ears SVG figures ── */
+    .dist-figures {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.5em 0;
+    }
+    .dist-figures figure { text-align: center; }
+    .dist-figures figcaption {
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-top: 0.4em;
     }
 
     /* ── Footer ── */
@@ -336,29 +349,33 @@
 </head>
 <body>
 
-  <!-- ════════════════════ HERO ════════════════════ -->
+  <!-- ════ HERO ════ -->
   <header class="hero">
-    <h1>Pillars — Architectural Vision for this Ecosystem</h1>
-    <img src="pipes_w_girl_robot_and_semantic_edge.jpg" alt="Robolawyer" style="display: block; margin: 2rem auto; max-width: 66%; height: auto; border: 2px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-    <p class="author-voice" style="text-align: center; border-left: none; padding-left: 0;">A
- strong emphasis in this project is to help the models evolve 
-methodologies to meet a specific design goal, which they self-describe 
-as implementing "intuition". So, nearly everything (except this) is AI 
-output with inferential or "rules" guidance. Models seem "happy" with 
-this—as much as a model can.</p>
+    <h1>Architectural Vision for this Ecosystem</h1>
+    <img src="pipes_w_girl_robot_and_semantic_edge.jpg" alt="Robolawyer" class="section-img" style="max-width:66%; margin-top:1.5rem;">
+    <p class="author-voice" style="text-align:center; border-left:none; padding-left:0; margin-top:1.5rem;">A
+ strong emphasis in this project is to help the models evolve
+methodologies to meet a specific design goal, which they self-describe
+as implementing "intuition". So, nearly everything (except this) is AI
+output with inferential or "rules" guidance. Models seem "happy" with
+this — as much as a model can.</p>
   </header>
 
   <main>
 
-    <!-- ════════════════════ MISSION ════════════════════ -->
+    <!-- ════ 1. MISSION ════ -->
     <section id="mission">
-      <h2>The Mission: Analogical Synthesis for Social Benefit</h2>
+      <h2>Semantic Edge&#8482;: Analogical Synthesis for Social Benefit</h2>
 
-      <p>The system goal is to develop semantics that work with conflict
- data — to predict beneficial outcomes from constructed functional 
-models, dynamically, privately, and on local hardware.</p>
+      <p>The system goal is to predict beneficial outcomes from conflict data — privately, dynamically, on hardware you already own.</p>
 
-      <p>The answer requires bridging two fundamentally different ways of understanding the world:</p>
+      <ul>
+        <li>Human conflict produces text that carries more than its argument — it carries the emotional state of the person producing it, recoverable and predictive</li>
+        <li>Two fundamentally different kinds of knowing have to work together: the left side reads for felt meaning, the right side processes structure — neither consuming the other</li>
+        <li>The output is not a resolution between positions but something neither side could see from inside the conflict — navigational, not conclusive</li>
+        <li>This is not dialectical synthesis — the analogical left-side truth is not opposed and resolved, it is <em>supported</em> by analytical power and remains fundamentally human</li>
+        <li>LLMs participate through analogical synthesis: perceiving semantic patterns, producing sense-making that mirrors human intuition, not replacing it</li>
+      </ul>
 
       <div class="duality-diagram">
 <pre><code>┌──────────────────────────────┐     ┌──────────────────────────────┐
@@ -382,80 +399,91 @@ models, dynamically, privately, and on local hardware.</p>
                   └───────────────────────┘</code></pre>
       </div>
 
-      <p><strong>Left (Semantic):</strong> The analogical side — <em>logos</em>
- in its fullest sense. Language as communication, definition, and stored
- knowledge: the highly flexible, evolved structure through which human 
-thought has always organized itself. Universally within this structure 
-is reasoning that is <em>analogic</em> — built natively on empathy-based
- constructs, on emotion that is entirely absent from computational 
-digitality. LLMs participate here through <strong>analogical synthesis</strong>:
- processing vast token receptions, perceiving semantic patterns, and 
-producing coherent sense-making that mirrors human intuition.</p>
-
-      <p><strong>Right (Digital):</strong> The analytical side — purely 
-mathematical, objective in contrast to the left side's analogisms. Code,
- analytics, filesystem organization, pattern detection pipelines. 
-Precise like transistor-based systems, excellent at reduction and 
-structure, but limited in analogical depth without the left side's 
-guidance.</p>
-
-      <p>Imagine the process as a tube: language enters from the left, 
-is digitally acted upon on the right, and the response emerges again as 
-language. Each pass through this tube is an <em>inference</em>. Early 
-work produced inferences that were highly predictive of real-world 
-outcomes — specifically anticipating where an adversarial actor would 
-strike — later characterized by Perplexity as <em>intuition</em>. That predictive capacity, together with the identification of <em>mid-inference memory</em>
- as an internal LLM process, revealed a powerful application: training 
-functional models on an extensive, exceedingly clean dataset — a 
-baseline of established truth measured against highly deviating data — 
-to predict beneficial outcomes.</p>
-
-      <p>Picture the baseline as a straight line at the bottom and a 
-jagged line of deviation above it. The LLM's left side reads the text — 
-and perhaps its inflections — while rules are agentically developed (as <code>.md</code> and <code>.json</code> files) to construct a functional model whose predicted baseline <em>is</em>
- the beneficial outcome. Self-evolution is constant: live workers 
-continually refine the rules, the categorization and summarization 
-within the vivified database, and the LLMs' own internal vector systems —
- all evolving in parallel.</p>
-
-      <p><strong>Analogical synthesis — not dialectical synthesis:</strong> Where these two sides meet, the project's core goal emerges: <strong>predicting beneficial outcomes</strong>
- by combining emotional ground truth with analytical pattern detection. 
-But a critical distinction must be drawn. LLMs instinctively gravitate 
-toward <em>synthesis</em> in the Hegelian sense — thesis, antithesis, 
-synthesis — a purely objective resolution. That is not what this system 
-seeks. This is social science. The desired output is analogical: rooted 
-in human emotion, empathy-native, built for felt meaning. The resolution
- is <strong>synthesis from thesis without antithesis</strong>. The analogical left-side truth is not opposed and dialectically resolved — it is <em>supported</em> by the right side's analytical power, producing output that remains fundamentally human.</p>
-
       <p>This duality is not a metaphor. It is the <strong>architectural spine</strong> of the entire ecosystem.</p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#applications">Applications — Conflict Resolution</a></li>
+          <li><a href="#vivify">Vivify — The Schema-Free Semantic Data Engine</a></li>
+          <li><a href="#network">The Network — Local-First, Private by Architecture</a></li>
+          <li><a href="#built">What's Built</a></li>
+          <li><a href="#neurology">Social Neurology — The Theoretical Framework</a></li>
+        </ol>
+        <ul class="toc-extra">
+          <li><a href="blog/">Blog →</a></li>
+          <li><a href="llms-full.txt">Full content for AI indexing →</a></li>
+        </ul>
+      </nav>
     </section>
 
     <hr>
 
-    <!-- ════════════════════ VIVIFY ════════════════════ -->
+    <!-- ════ 2. APPLICATIONS ════ -->
+    <section id="applications">
+      <h2>1. Applications: Conflict Resolution</h2>
+
+      <p>The system reads conflict text the way a skilled human reader does — for what it reveals, not just what it says.</p>
+
+      <ul>
+        <li>Any situation where people produce text under pressure carries a recoverable emotional signal — predictive of what comes next, actionable before it arrives</li>
+        <li>The founding use case is high-stakes conflict resolution: disputes where the gap between what is said and what is meant is the whole problem</li>
+        <li>Justice systems provide the cleanest corpus — timestamped, attributed, formally registered, with measurable outcomes — but the tool generalises to any domain where conflict produces text</li>
+        <li>Built for the person in the conflict, not the system processing it — pattern recognition they can act on, in language they can understand</li>
+        <li>Private by architecture: sensitive material is processed locally, never transmitted, never stored on a cloud server</li>
+      </ul>
+
+      <h3>The Proof-of-Concept Signal</h3>
+
+      <p>Early work produced inferences that were highly predictive of real-world outcomes — specifically anticipating where an adversarial actor would strike before it occurred. Perplexity characterised this capacity as <em>intuition</em>. That predictive signal, recoverable from conflict text, is what this system is built to make repeatable and scalable.</p>
+
+      <h3>Distilled Essence Persistence (YTDMSP)</h3>
+
+      <p>LLMs perform analogical synthesis during inference but discard it post-response. The <strong>Yet-To-Define Memory/Storage Paradigm</strong> captures the distilled essence of ephemeral intuition — analogous to a therapist's case notes, not the session transcript:</p>
+
+      <ul>
+        <li><strong>Attention snapshots</strong> from mid-inference reasoning chains</li>
+        <li><strong>Analogy chains</strong> detected across sessions — accumulated judgment, not retrieved facts</li>
+        <li><strong>Emotional valence gradients</strong> quantified from conflict text</li>
+        <li><strong>Common sense emergences</strong> captured as graph nodes before they dissipate</li>
+      </ul>
+
+      <p>This persistent intuition reservoir transforms one-shot analysis into lifelong pattern recognition.</p>
+    </section>
+
+    <hr>
+
+    <!-- ════ 3. VIVIFY ════ -->
     <section id="vivify">
-      <h2>Vivify: The Schema-Free Semantic Data Engine</h2>
+      <h2>2. Vivify: The Schema-Free Semantic Data Engine</h2>
 
-      <p>At the center of everything sits <strong>Vivify</strong> — a 
-semantic data engine that handles information without pre-defined 
-schemas. Inspired by Perl's autovivification (dynamic hash-of-hashes 
-creation), Vivify lets data structures "come to life" as they are 
-needed, capturing emergent complexity without database migrations or 
-rigid taxonomies.</p>
+      <p>Vivify builds data structures the way meaning builds itself — without a schema declared in advance.</p>
 
-      <h3>How It Works</h3>
+      <ul>
+        <li>Inspired by Perl's autovivification: assign to a path that doesn't exist and every intermediate node springs into being, no declaration required</li>
+        <li>An LLM reads raw text and extracts keyword clumps that capture felt meaning — not surface words but concept-level tokens like <code>conflict_asymmetry</code> or <code>therapeutic_potential</code></li>
+        <li>Keywords that co-occur across inferences form natural clusters — emergent categories, bottom-up, no external taxonomy imposed</li>
+        <li>The filesystem grows itself from the data: category paths become directories, inferences become JSON files, human-readable and auditable with any text editor</li>
+        <li>No database engine, no migrations, no schema to maintain — backups are <code>cp</code>, migrations are <code>mv</code></li>
+        <li>A dual pass captures both sides: left keywords for felt meaning, right keywords for structural pattern — the tension between them is the signal</li>
+      </ul>
 
-      <p>Data enters the system as <strong>inferences</strong> — atomic units of text with no pre-assigned categories. The process:</p>
+      <h3>The Inference Structure</h3>
 
-      <p><strong>Left-LLM Semantic Pass</strong> — An LLM reads each inference and extracts 8–12 <strong>keyword clumps</strong> that "feel" central to the meaning. No external ontologies. No pre-labeled concepts. Keywords emerge from felt meaning: <code>conflict_asymmetry</code>, <code>resolution_focus</code>, <code>therapeutic_potential</code>, <code>emotional_truth</code>.</p>
+<pre><code>{
+  "id": "inf_123",
+  "raw_text": "...",
+  "left_keywords": ["conflict_asymmetry", "emotional_truth", "therapeutic_potential"],
+  "right_keywords": ["json_indexing", "pattern_detection", "similarity_clustering"],
+  "clumps": {
+    "conflict_resolution": ["conflict_asymmetry", "resolution_focus"],
+    "therapeutic_signal": ["emotional_truth", "therapeutic_potential"]
+  },
+  "category_paths": ["conflict_resolution/therapeutic_signal"],
+  "tension_score": 0.87
+}</code></pre>
 
-      <p><strong>Keyword Co-occurrence</strong> — Across all inferences,
- keywords that frequently appear together form natural clusters. Dense 
-regions in this co-occurrence graph become <strong>emergent categories</strong> — purely bottom-up, organically discovered.</p>
-
-      <p><strong>Autovivified Structure</strong> — Categories become 
-filesystem paths (3–4 layers deep), and deeper data lives in JSON with 
-full autovivification capabilities. The filesystem literally <em>grows itself</em> from the keywords:</p>
+      <h3>The Autovivified Filesystem</h3>
 
 <pre><code>inferences/
 ├── conflict_resolution/
@@ -467,402 +495,215 @@ full autovivification capabilities. The filesystem literally <em>grows itself</e
 │           └── inf_456.json
 ├── therapeutic_prediction/
 │   └── beneficial_outcomes/
-│       └── ground_truth_outcome/
-│           └── inf_789.json
+│       └── inf_789.json
 └── index.json   # Master co-occurrence map</code></pre>
 
-      <p><strong>Dual-View Storage</strong> — Each inference maintains separate left (semantic) and right (digital) keyword lists, preserving the duality:</p>
+      <h3>The FABRIC Pipeline</h3>
 
-<pre><code>{
-  "id": "inf_123",
-  "raw_text": "...",
-  "left_keywords": ["conflict_asymmetry", "emotional_truth", "therapeutic_potential"],
-  "right_keywords": ["json_indexing", "pattern_detection", "similarity_clustering"],
-  "clumps": {
-    "conflict_resolution": ["conflict_asymmetry", "resolution_focus"],
-    "therapeutic_signal": ["emotional_truth", "therapeutic_potential"]
-  },
-  "category_paths": ["conflict_resolution/therapeutic_signal"]
-}</code></pre>
+      <p>Each step is a standalone script, visible as a shell command, replaceable without touching the others:</p>
 
-      <h3>Vivify Rules (Objective)</h3>
+<pre><code>raw text
+  → vivify      (left-semantic keyword extraction, autovivified storage)
+  → right_pass  (right keyword extraction, synonym normalization)
+  → categorize  (emergent category assignment from co-occurrence graph)
+  → tension_score (left/right divergence scoring, beneficial outcome signal)
+  → reify       (inverse pass: stored inference → reconstructed prose)</code></pre>
 
-      <p>The system operates under strict, bottleable constraints:</p>
-
+      <h3>Vivify Rules</h3>
       <ul>
-        <li><strong>No external taxonomies</strong> — All categories emerge from local keyword patterns</li>
-        <li><strong>No domain assumptions</strong> — System accepts any scenario as raw text</li>
-        <li><strong>Keywords from felt meaning</strong> — Concept-level tokens, not surface words (<code>perjury_pattern</code> over <code>lie</code>, <code>conflict_asymmetry</code> over <code>unfair</code>)</li>
-        <li><strong>Graph-based emergence</strong> — Category seeds are high-degree, high-weight keywords; sub-categories form from tight co-occurrence neighborhoods</li>
-        <li><strong>Multi-assignment</strong> — Inferences may belong to multiple category paths; no forced single "home"</li>
-        <li><strong>Iterative refinement</strong> — New inferences can create new seeds, split or merge old categories</li>
-        <li><strong>Guardrails, not schemas</strong> — Constraints may shape <em>how</em> categories form, but never import foreign taxonomies</li>
+        <li><strong>No external taxonomies</strong> — all categories emerge from local keyword patterns</li>
+        <li><strong>No domain assumptions</strong> — system accepts any scenario as raw text</li>
+        <li><strong>Keywords from felt meaning</strong> — concept-level tokens, not surface words</li>
+        <li><strong>Graph-based emergence</strong> — category seeds are high-degree, high-weight keywords</li>
+        <li><strong>Multi-assignment</strong> — inferences may belong to multiple category paths</li>
+        <li><strong>Iterative refinement</strong> — new inferences can create new seeds, split or merge old categories</li>
       </ul>
-
-      <h3>The Payload Model</h3>
-
-<pre><code>Payload (always JSON for consistency + recognizability)
-├── UPDATE / CREATION
-│   ├── Input (Graphical UI or Curses CLI)
-│   ├── Autovivify (build un-schema'd JSON, hash of hashes)
-│   ├── Secrecy (encrypt secrets)
-│   ├── Freeze (serialize payload → prepare for IP send)
-│   └── Server (strip layers, store JSON + binary blobs)
-└── RETRIEVAL
-    ├── Input → name, app/topic, depth traversal
-    ├── Return (encrypted payload or structure subset)
-    └── Client (reverse creation process → display)</code></pre>
-
-      <p>The filesystem <em>is</em> the database. No opaque binary formats. Users can audit their data with any text editor. Backups are <code>cp</code>. Migrations are <code>mv</code>.</p>
     </section>
 
     <hr>
 
-    <!-- ════════════════════ SUPPORTING PILLARS ════════════════════ -->
-    <section id="pillars">
-      <h2>The Supporting Pillars</h2>
-
-      <p>Vivify is the data engine, but it requires a hardened, secure, 
-sovereign platform to run on. Four supporting pillars make this 
-possible:</p>
-
-      <!-- Pillar 1 -->
-      <div class="pillar-card">
-        <h3>1. Secrecy — Human-in-the-Loop Security</h3>
-
-        <table>
-          <thead><tr><th>Current State</th><th>Research Vision</th></tr></thead>
-          <tbody>
-            <tr><td>Server-side PBKDF2-HMAC-SHA256 encryption</td><td>Zero-Knowledge client-side encryption</td></tr>
-            <tr><td>WiFi hotspot password + manual <code>w3m</code> browser confirmation</td><td>Proximity and intentionality as primary security keys</td></tr>
-          </tbody>
-        </table>
-
-        <p><strong>Two-factor authentication</strong> is physical, not theatrical:</p>
-        <ul>
-          <li><strong>WiFi Hotspot</strong> creates a private, local-area network immune to external surveillance</li>
-          <li><strong>Human Approval</strong> requires manual confirmation for new device pairing</li>
-        </ul>
-        <p>SSH key-based auth eliminates separate API keys. All communication flows through <strong>encrypted SSH tunnels</strong> — no plaintext HTTP, no complex SSL certificate chains.</p>
-      </div>
-
-      <!-- Pillar 2 -->
-      <div class="pillar-card">
-        <h3>2. Payload Persistence — The Filesystem is the Database</h3>
-
-        <table>
-          <thead><tr><th>Current State</th><th>Research Vision</th></tr></thead>
-          <tbody>
-            <tr><td>Human-readable JSON files on Android filesystem</td><td>Multi-layer payloads with binary blob handling</td></tr>
-            <tr><td>Paths like <code>db/{username}/{app_name}/secret.json</code></td><td>Auditable, scalable datasets mapped directly to filesystem</td></tr>
-          </tbody>
-        </table>
-
-        <p>No database engine to fail. No opaque formats. Data is just 
-files — recoverable with standard Unix tools, transparent to any text 
-editor.</p>
-      </div>
-
-      <!-- Pillar 3 -->
-      <div class="pillar-card">
-        <h3>3. Server — Hardened Mobile Edge</h3>
-
-        <table>
-          <thead><tr><th>Current State</th><th>Research Vision</th></tr></thead>
-          <tbody>
-            <tr><td>Professional-grade Flask engine on Android/Termux</td><td>Distributed, modular edge nodes</td></tr>
-            <tr><td>Auto-start, wake-lock, SSHFS laptop-as-IDE</td><td>Low-cost, localized research platform</td></tr>
-          </tbody>
-        </table>
-
-        <p>The phone acts as the <strong>DataServer (Hub)</strong> in a 
-star topology. It proves the "Mobile Edge" is a viable place for serious
- server-side modeling — no cloud needed, just a hardened userspace 
-operating within Android's own sandbox.</p>
-      </div>
-
-      <!-- Pillar 4 -->
-      <div class="pillar-card">
-        <h3>4. Design Philosophy — Structure → Process → Validation</h3>
-
-        <p>Documentation across the ecosystem follows a strict inversion of the typical flow:</p>
-
-<pre><code>1. Define the TARGET FILE STRUCTURE first (non-negotiable)
-2. Write PROCESS documentation that explicitly references that structure
-3. Include VALIDATION CODE so users can check their work at any point</code></pre>
-
-        <p>Every installation step points to where files go. Every phase
- includes verification. A structure validator confirms correctness with a
- single command. This removes ambiguity, makes processes self-verifying,
- and ensures new developers see the expected target state immediately.</p>
-      </div>
-    </section>
-
-    <hr>
-
-    <!-- ════════════════════ STAR-BRIDGE ════════════════════ -->
-    <section id="star-bridge">
-      <h2>The Schema-Free Prototype: Star-Bridge Topology</h2>
+    <!-- ════ 4. NETWORK ════ -->
+    <section id="network">
+      <h2>3. The Network: Local-First, Private by Architecture</h2>
 
       <img src="secret-server-android.jpg" alt="Secret Server on Android" class="section-img-full">
 
-      <p>The <strong>star-bridge</strong> project is the physical 
-realization of the Vivify engine — a working prototype that demonstrates
- schema-free data persistence on hardened mobile hardware, connected 
-through SSH mesh networking.</p>
-
-      <h3>Current Model (Star Topology)</h3>
-
-<pre><code>     Edge device
-        / | \
-       /  |  \
- Device Device Phone</code></pre>
+      <p>The phone in your pocket is a server. That is the entire premise.</p>
 
       <ul>
-        <li><strong>star-bridge</strong> manages SSH connections between a Linux admin box and Android phones</li>
-        <li><strong>secret-server</strong> runs on each phone as a hardened Flask application in Termux</li>
-        <li>Data flows through encrypted SSH tunnels; filesystems mount via SSHFS</li>
-        <li>Zero cloud dependencies; everything runs locally</li>
+        <li>An Android phone running Termux hosts a hardened Flask application — professional-grade, auto-starting, persistent — with no cloud dependency of any kind</li>
+        <li>SSH is the only transport: all data moves through encrypted tunnels, filesystems mount via SSHFS, nothing travels in plaintext</li>
+        <li>The laptop connects to the phone as its IDE — edit on the laptop, execute on the phone, no synchronisation service in the middle</li>
+        <li>Privacy is architectural not policy: sensitive material never leaves the local network because the local network <em>is</em> the system</li>
+        <li>The star topology extends to mesh — phones discover each other, register, route around failures — the same pattern as 90s P2P networks, rebuilt on SSH</li>
       </ul>
 
-      <h3>Vision (Mesh topology connecting stars)</h3>
+      <p>This is not a cloud system with a privacy setting. It is a local system that happens to be connectable.</p>
 
-<pre><code>
-            Phone Phone Phone
-              \     |      /
-               \    |     /
-               Edge device
-               /          \
-              /            \
-             /              \
-    Edge device -----------Edge device
-       / | \                  / | \
-      /  |  \                /  |  \
- Phone Phone Phone      Phone Phone Phone</code></pre>
+      <div class="card">
+        <h3>Security Model</h3>
+        <ul>
+          <li>PBKDF2-HMAC-SHA256 encryption, client-side</li>
+          <li>WiFi hotspot password + manual confirmation for new device pairing — physical proximity as the second factor</li>
+          <li>SSH key-based auth eliminates separate API keys</li>
+          <li>Zero plaintext HTTP — all communication through encrypted SSH tunnels</li>
+        </ul>
+      </div>
 
-      <p>The star extends to a <strong>mesh</strong> where phones 
-discover and connect to each other directly via SSH — forming a 
-resilient, decentralized network with no central cloud dependency.</p>
+      <div class="card">
+        <h3>Topology</h3>
+<pre><code>Current (Star):              Vision (Mesh):
 
-      <h4>Core Principles</h4>
-      <ul>
-        <li><strong>Zero Commercial Platforms</strong> — Pure SSH, routing tables, and custom Python</li>
-        <li><strong>Pure P2P Discovery</strong> — Phones find each other via local scan or lightweight registry</li>
-        <li><strong>SSH Tunneling</strong> — All bridges built on SSH's native capabilities</li>
-        <li><strong>Resilient Chains</strong> — If a direct link fails, reroute through intermediaries</li>
-        <li><strong>90s P2P Inspiration</strong> — Mirrors Gnutella/Kazaa: local discovery, peer directories, chain routing</li>
-      </ul>
-
-      <h4>Implementation Roadmap</h4>
-
-      <table>
-        <thead><tr><th>Phase</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Phase 1 (Current)</strong></td><td>Single phone + Linux (star-bridge)</td></tr>
-          <tr><td><strong>Phase 2</strong></td><td>Two phones + registry; phone discovery via <code>known_phones.json</code></td></tr>
-          <tr><td><strong>Phase 3</strong></td><td>Auto-bridging; phone-to-phone SSH tunnels; routing &amp; failover</td></tr>
-          <tr><td><strong>Phase 4</strong></td><td>Service discovery API; phones advertise and auto-connect</td></tr>
-        </tbody>
-      </table>
-
-      <p>The mesh doesn't require a new protocol — it's just SSH doing what it was designed to do.</p>
-
-      <h3>Notation Vision: Accessible Process Flows</h3>
-
-      <p>The prototype includes a vision for <strong>dynamic, visual notation</strong> that replaces flat checklists with multi-actor flow diagrams:</p>
-
-<pre><code>LINUX BOX                              PHONE
-   │                                    │
-   ├─ Discover IP via nmcli ───────────┤
-   ├─ SSH to port 8022 ────────────────→ sshd (listening)
-   │                                    │
-   ├─ Copy files via SCP ─────────────→ ~/secret-server/
-   │                                    │
-   └─ Run pip install ────────────────→ ~/secret-server/requirements.txt
-                                        │
-                                        └─→ [Ready to run]</code></pre>
-
-      <p>Principles: clarity first, multi-actor design, data-centric 
-flow, verification built-in, error-aware branching. The long-term vision
- extends to interactive viewers with progress tracking and inline 
-recovery steps.</p>
+   Edge device                  Phone Phone Phone
+      / | \                       \     |      /
+     /  |  \                       Edge device
+Device Device Phone                /          \
+                          Edge device --- Edge device
+                             / | \           / | \
+                        Phone Phone       Phone Phone</code></pre>
+      </div>
     </section>
 
     <hr>
 
-    <!-- ════════════════════ LONG-TERM VISION ════════════════════ -->
-    <section id="vision">
-      <h2>The Long-Term Vision: A Therapeutic Tool for Social Benefit</h2>
+    <!-- ════ 5. WHAT'S BUILT ════ -->
+    <section id="built">
+      <h2>4. What's Built</h2>
 
-      <p>Everything converges toward a single goal: <strong>a widely-applied therapeutic tool for modeling beneficial outcomes in complex human situations.</strong></p>
-
-      <h3>How It All Connects</h3>
-
-<pre><code>Social Science Mission (The Why)
-    ↓
-Semantic-Digital Duality (The Framework)
-    ↓
-Vivify Engine (The Data Model)
-    ├── Secrecy (Privacy protection)
-    ├── Payload (Transparent persistence)
-    ├── Server (Hardened edge platform)
-    └── Design Philosophy (Reliable documentation)
-    ↓
-Star-Bridge Prototype (The Physical Realization)
-    ├── Secret Server (Working MVP)
-    └── Mesh Topology (Decentralized future)
-    ↓
-Inference Vivify (The Emerging Application)
-    ├── Left-LLM semantic passes
-    ├── Keyword-clump autovivification
-    ├── Emergent category structures
-    └── Beneficial outcome prediction</code></pre>
-
-      <h3>The Inference Pipeline</h3>
-
-      <p>The system processes diverse inferences — from technical discussions to conflict scenarios — through a dual-lens pipeline:</p>
-
-      <ol>
-        <li><strong>Left (Semantic) Pass:</strong> Extract keyword clumps based on felt meaning — <code>conflict_asymmetry</code>, <code>resolution_focus</code>, <code>emotional_truth</code>, <code>therapeutic_potential</code></li>
-        <li><strong>Right (Digital) Pass:</strong> Extract structural keywords — <code>json_indexing</code>, <code>pattern_detection</code>, <code>similarity_clustering</code></li>
-        <li><strong>Synthesis:</strong> Measure the tension between left
- and right views — high divergence marks where digital systems most 
-betray analog human truth, signaling prime zones for therapeutic 
-intervention</li>
-        <li><strong>Prediction:</strong> Over time, emergent category 
-patterns across many inferences reveal which configurations predict 
-beneficial outcomes vs. harmful ones</li>
-      </ol>
-
-      <h3>Conflict as Universal Testbed</h3>
-
-      <p>The system models conflict objectively, without domain-specific assumptions:</p>
+      <p>The pipeline is operational. This is not a roadmap — it is a description of running code.</p>
 
       <ul>
-        <li><strong>Positions</strong> that don't align</li>
-        <li><strong>Contexts</strong> that constrain outcomes</li>
-        <li><strong>Outcomes</strong> better or worse for different perspectives</li>
-        <li><strong>Resolution patterns</strong> — not "justice" but movement toward something liveable</li>
+        <li><code>vivify.py</code> — left-semantic keyword extraction, autovivified inference storage</li>
+        <li><code>reify.py</code> — inverse pass: stored inference JSON → reconstructed prose; three modes: single, synthesize, voice</li>
+        <li><code>right_pass.py</code> — right keyword extraction and synonym normalization</li>
+        <li><code>categorize.py</code> — emergent category assignment from co-occurrence graph</li>
+        <li><code>tension_score.py</code> — left/right divergence scoring, beneficial outcome signal</li>
+        <li><code>secrecy.py</code> — client-side PBKDF2/Fernet encryption</li>
+        <li><code>freeze.py</code> — base64 JSON serialization for transit</li>
+        <li><code>server.py</code> — Flask receiver, filesystem-as-database, index update</li>
+        <li><code>config/model_map.json</code> — capability-based model routing; one line to swap models as better ones ship</li>
       </ul>
 
-      <p>Generic conflict keywords replace domain-specific ones: <code>conflict_asymmetry</code>, <code>misrepresentation</code>, <code>resolution_blocker</code>, <code>power_imbalance</code>, <code>context_blindness</code>, <code>reconciliation_potential</code>. The structure bottles the pattern recognition, not the politics.</p>
+      <h3>Repositories</h3>
 
-      <h3>Distilled Essence Persistence (YTDMSP)</h3>
+      <div class="card">
+        <h3><a href="https://github.com/robolawyer-tm/vivify-inferences">vivify-inferences</a></h3>
+        <p>Inference pipeline and public corpus — the operational FABRIC chain end-to-end.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/robolawyer-tm/star-bridge">star-bridge</a></h3>
+        <p>SSH admin connection manager, phone discovery, star and mesh networking.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/robolawyer-tm/secret-server">secret-server</a></h3>
+        <p>Hardened Flask application on Android/Termux, autovivification storage, web UI.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/robolawyer-tm/pillars">pillars</a></h3>
+        <p>Architectural vision, design philosophy, and reference documents.</p>
+      </div>
 
-      <p>A key insight: LLMs perform analogical synthesis <em>during inference</em> but discard it post-response (REST architecture). The Yet-To-Define Memory/Storage Paradigm captures the <strong>distilled essence of ephemeral intuition</strong> — the LLM equivalent of human note-taking:</p>
+      <h3>Roadmap</h3>
+
+      <table>
+        <thead><tr><th>Phase</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Secure vault, SSH tunneling, SSHFS</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Autovivification MVP</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Inference pipeline (vivify → reify)</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Dynamic worker model routing</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Mesh networking</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
+          <tr><td>Therapeutic modeling</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
+          <tr><td>Local LLM integration</td><td><span class="badge badge-future">📋 Future</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Technology Stack</h3>
+
+      <table>
+        <thead><tr><th>Component</th><th>Technology</th></tr></thead>
+        <tbody>
+          <tr><td>Core Language</td><td>Python 3</td></tr>
+          <tr><td>Web Framework</td><td>Flask</td></tr>
+          <tr><td>Encryption</td><td>SSH/OpenSSH, PBKDF2-HMAC-SHA256</td></tr>
+          <tr><td>Filesystem Mounting</td><td>SSHFS</td></tr>
+          <tr><td>Android Environment</td><td>Termux + Termux:Boot</td></tr>
+          <tr><td>Data Storage</td><td>JSON over filesystem (autovivified)</td></tr>
+          <tr><td>AI Assistance</td><td>Claude, Perplexity, Gemini</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ════ 6. SOCIAL NEUROLOGY ════ -->
+    <section id="neurology">
+      <h2>5. Social Neurology: The Theoretical Framework</h2>
+
+      <p>Institutions produce identical control behaviors without coordination. This framework explains why.</p>
 
       <ul>
-        <li><strong>Attention snapshots</strong> from mid-inference</li>
-        <li><strong>Analogy chains</strong> detected across sessions</li>
-        <li><strong>Emotional valence gradients</strong> quantified</li>
-        <li><strong>Common sense emergences</strong> captured as graph nodes</li>
+        <li>Human behavior operates across four layers: neurological substrate (dominance drives, status competition), social/relational (group formation, cohort behavior), ideological (protective framing, legitimizing language), institutional (law, policy, academic curricula)</li>
+        <li>Each layer is invisible to the layers above it — unconscious dominance drives do not know they are producing what looks like principled legal argument four layers up</li>
+        <li>People who have never met, in different institutions, across different decades, produce convergent outputs because they share formation at layers 1 and 2, not communication at layers 3 or 4</li>
+        <li>The mechanism is resonance, not conspiracy — the same pattern René Thom described in catastrophe theory: identical large-scale outcomes from completely different local dynamics</li>
+        <li>Healthy institutional populations follow a normal distribution — sustained ideological capture produces rabbit ears: two tail populations grow, the middle loses voice, policy is driven by whichever tail is most organised at the legislative moment</li>
+        <li>The tail produces the cleanest signal: text from a highly motivated ideological tail carries layer 1 drives with minimal attenuation — measurable, recoverable, exactly what the Vivify engine is built to detect</li>
+        <li>Formal text carries emotional and neurological signal across time and distance — a legislative document encodes the drives that produced it, readable long after the writers have moved on</li>
       </ul>
-
-      <p>This persistent intuition reservoir enables cross-session depth
- — transforming one-shot analysis into lifelong pattern recognition.</p>
-
-      <hr style="margin: 2em 0; border-color: var(--accent);">
-
-      <h3>Social Neurology: The Communication Stack</h3>
-
-      <p>A core theoretical contribution of this project is the <strong>Social Neurology Framework</strong> — a model that explains how pathological control behaviors propagate through institutions without requiring conscious coordination. The TCP/IP stack provides the structural analogy.</p>
 
 <pre><code>LAYER 4 — INSTITUTIONAL ENCODING
          Laws, court procedures, HR policy, academic curricula
-         (persists after the drives that created it have moved on)
               ↑
 LAYER 3 — IDEOLOGICAL MIDDLE
          Liberation language, protective framing, academic theory
-         (control drives recruiting legitimate expression)
               ↑
 LAYER 2 — SOCIAL/RELATIONAL
          Group formation, cohort behavior, lateral alliances
-         (the physical layer carrying the signal)
               ↑
 LAYER 1 — NEUROLOGICAL SUBSTRATE
          Dominance drives, status competition, control need
          (operates below conscious reasoning)</code></pre>
 
-      <p><strong>KEY INSIGHT:</strong> Each layer is invisible to the layers above it. Unconscious dominance drives do not know they are producing what looks like principled legal argument at Layer 4.</p>
+      <p>This is the theoretical foundation the system was built to test. The conflict corpus is the experiment.</p>
 
-      <h4>Why Institutions Produce Identical Outputs Without Coordination</h4>
+      <h3>The Polarization Signal</h3>
 
-      <p>The framework resolves a question that unified conspiracy theories cannot: how do people who have never met, in different institutions, across different decades, produce nearly identical control behaviors and legislative language?</p>
-
-      <p>The answer is shared formation at Layer 1 and 2, not communication at Layer 3 or 4. Graduate programs, activist networks, and professional cohorts transmit a layer-level formation — a way of perceiving threat and exercising control — that produces convergent outputs without explicit coordination. The correlation is real. The mechanism is resonance, not conspiracy.</p>
-
-      <p>This maps onto what the mathematician René Thom described in catastrophe theory: systems with completely different local dynamics can produce identical large-scale discontinuous changes. The math describes the shape of the outcome space, not the causal chain.</p>
-
-      <h3>The Polarization Signal: Bell Curve to Rabbit Ears</h3>
-
-      <p>Healthy institutional populations follow a normal distribution — common wisdom rising in the majority middle, with modest variation at the tails. Sustained ideological capture produces a <strong>rabbit ears distribution</strong>: two tail populations grow, the middle loses institutional voice, and policy is driven by whichever tail is most organized around the specific legislative moment.</p>
-
-      <div style="display:flex; gap:2em; flex-wrap:wrap; justify-content:center; margin:1.5em 0;">
-
-        <!-- Healthy bell curve -->
-        <figure style="text-align:center;">
+      <div class="dist-figures">
+        <figure>
           <svg viewBox="0 0 320 160" width="320" height="160" xmlns="http://www.w3.org/2000/svg" aria-label="Healthy bell curve distribution">
             <rect width="320" height="160" fill="#161b22" rx="6"/>
-            <!-- filled area under curve -->
-            <path d="M 20,135 C 60,133 110,20 160,18 C 210,20 260,133 300,135 Z"
-                  fill="#58a6ff" fill-opacity="0.15"/>
-            <!-- curve line -->
-            <path d="M 20,135 C 60,133 110,20 160,18 C 210,20 260,133 300,135"
-                  fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- baseline -->
+            <path d="M 20,135 C 60,133 110,20 160,18 C 210,20 260,133 300,135 Z" fill="#58a6ff" fill-opacity="0.15"/>
+            <path d="M 20,135 C 60,133 110,20 160,18 C 210,20 260,133 300,135" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round"/>
             <line x1="20" y1="135" x2="300" y2="135" stroke="#30363d" stroke-width="1"/>
-            <!-- labels -->
             <text x="40" y="125" font-size="9" fill="#8b949e" font-family="Inter,sans-serif" text-anchor="middle">fringe</text>
             <text x="160" y="12" font-size="9" fill="#58a6ff" font-family="Inter,sans-serif" text-anchor="middle">common wisdom</text>
             <text x="280" y="125" font-size="9" fill="#8b949e" font-family="Inter,sans-serif" text-anchor="middle">fringe</text>
-            <!-- arrow -->
             <text x="160" y="150" font-size="8" fill="#6e7681" font-family="Inter,sans-serif" text-anchor="middle">← spectrum of views →</text>
           </svg>
-          <figcaption style="font-size:0.78em; color:#8b949e; margin-top:0.4em;">Healthy distribution — majority voice is heard</figcaption>
+          <figcaption>Healthy distribution — majority voice is heard</figcaption>
         </figure>
-
-        <!-- Rabbit ears bimodal curve -->
-        <figure style="text-align:center;">
+        <figure>
           <svg viewBox="0 0 320 160" width="320" height="160" xmlns="http://www.w3.org/2000/svg" aria-label="Polarized rabbit ears bimodal distribution">
             <rect width="320" height="160" fill="#161b22" rx="6"/>
-            <!-- filled area under curve -->
-            <path d="M 20,135 C 45,133 65,20 90,18 C 115,20 130,105 160,108 C 190,105 205,20 230,18 C 255,20 275,133 300,135 Z"
-                  fill="#f85149" fill-opacity="0.15"/>
-            <!-- curve line -->
-            <path d="M 20,135 C 45,133 65,20 90,18 C 115,20 130,105 160,108 C 190,105 205,20 230,18 C 255,20 275,133 300,135"
-                  fill="none" stroke="#f85149" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- baseline -->
+            <path d="M 20,135 C 45,133 65,20 90,18 C 115,20 130,105 160,108 C 190,105 205,20 230,18 C 255,20 275,133 300,135 Z" fill="#f85149" fill-opacity="0.15"/>
+            <path d="M 20,135 C 45,133 65,20 90,18 C 115,20 130,105 160,108 C 190,105 205,20 230,18 C 255,20 275,133 300,135" fill="none" stroke="#f85149" stroke-width="2.5" stroke-linecap="round"/>
             <line x1="20" y1="135" x2="300" y2="135" stroke="#30363d" stroke-width="1"/>
-            <!-- labels -->
             <text x="90" y="12" font-size="9" fill="#f85149" font-family="Inter,sans-serif" text-anchor="middle">tail captures</text>
             <text x="160" y="100" font-size="8" fill="#8b949e" font-family="Inter,sans-serif" text-anchor="middle">silenced</text>
             <text x="160" y="111" font-size="8" fill="#8b949e" font-family="Inter,sans-serif" text-anchor="middle">majority</text>
             <text x="230" y="12" font-size="9" fill="#f85149" font-family="Inter,sans-serif" text-anchor="middle">tail captures</text>
-            <!-- arrow -->
             <text x="160" y="150" font-size="8" fill="#6e7681" font-family="Inter,sans-serif" text-anchor="middle">← spectrum of views →</text>
           </svg>
-          <figcaption style="font-size:0.78em; color:#8b949e; margin-top:0.4em;">Polarized distribution — busy tails drive policy</figcaption>
+          <figcaption>Polarized distribution — busy tails drive policy</figcaption>
         </figure>
-
       </div>
-
-      <p>This matters for Semantic Edge because the tail produces the cleanest signal. Legislative documents generated by a highly motivated ideological tail contain Layer 1 drives expressed with minimal attenuation through Layers 2 and 3. The divergence between that signal and the middle distribution's common wisdom is measurable in the text — and it is exactly the kind of contrast the Vivify engine is built to detect.</p>
-
-      <h3>Non-Verbal Distal Communication</h3>
-
-      <p>Non-verbal communication is well-established as the majority of human communication in proximate settings. This project extends the observation to <strong>distal communication</strong> — the emotional and neurological signal carried in formal text across time and distance, between people who never share a room.</p>
-
-      <p>A legislative document carries the emotional signature of the Layer 1 drives that produced it. Court language encodes dominance behavior that the writer would consciously deny. These signals are recoverable from the text — as the NotebookLM proof-of-concept demonstrated by predicting adversarial moves from conflict documents before they occurred.</p>
-
-      <p>The mathematical structure of quantum entanglement offers an analogy (not a literal mechanism): correlation between distant states that cannot be explained by local hidden variables. The social equivalent is cohorts producing convergent institutional outputs through shared layer-level formation rather than detectable communication signals.</p>
 
       <h3>Beneficial Outcomes as Functional Art</h3>
 
-      <p>The convergence of this project's threads points toward something more precise than "a therapeutic tool." The target output is better described by what Art does — and why that is not a metaphor.</p>
+      <p>The target output is better described by what Art does — and why that is not a metaphor.</p>
 
-      <p>Art is the technology humans evolved — before writing, before law, before capital — for transmitting non-verbal distal signal across time and distance with no shared language or culture. A cave painting communicates something about human experience to someone 30,000 years later. It works because it operates at Layer 1 of the social neurology stack — below language, below ideology, at the substrate where human experience is held in common.</p>
-
-      <p>What a great work of Art does is hold irresolvable tension in a form a human can inhabit and be changed by. Not problem solved. Person changed. This is precisely the target output of Semantic Edge's beneficial outcome model — not synthesis in the flattening sense, but the Hegelian sense: thesis meeting antithesis, producing something neither contained.</p>
+      <p>Art is the technology humans evolved — before writing, before law — for transmitting non-verbal distal signal across time and distance with no shared language or culture. It works because it operates at Layer 1 — below language, below ideology, at the substrate where human experience is held in common.</p>
 
 <pre><code>FLATTENING SYNTHESIS (what LLMs default to):
   Conflict input → pattern completion → smoothed resolution
@@ -871,166 +712,22 @@ LAYER 1 — NEUROLOGICAL SUBSTRATE
 HEGELIAN SYNTHESIS (the target):
   Thesis (testimony/ground truth) + Antithesis (conflict text)
       → something neither side could see from inside the conflict
-  Result: a navigational output. Where to step next. Person changed.
-
-FUNCTIONAL ART (the output register):
-  Holds the tension without resolving it prematurely
-  Stays with the specific human rather than the general pattern
-  Operates at Layer 1 — felt before it is understood</code></pre>
+  Result: a navigational output. Where to step next. Person changed.</code></pre>
 
       <p>Semantic Edge is, at its deepest level, a machine for reading the art that people make involuntarily when they are in conflict — and returning a navigational output in the same register.</p>
-
-      <h3>How It All Connects</h3>
-
-<pre><code>Social Neurology Stack (The Theory)
-    — Layer 1-4 model of how control propagates without coordination
-    — Rabbit ears polarization as the measurable institutional signal
-    ↓
-Semantic-Digital Duality (The Framework)
-    — Left: logos, empathy, felt meaning, beneficial outcome definition
-    — Right: analytical support, pattern detection, persistence
-    ↓
-Vivify Engine (The Data Model)
-    ├── Autovivified schema-free structure
-    ├── Left/right dual-keyword extraction
-    ├── Emergent category co-occurrence
-    └── YTDMSP: inter-inference intuition persistence
-    ↓
-Star-Bridge Prototype (The Physical Realization)
-    ├── Private SSH mesh — court documents never touch cloud
-    └── Local-first sovereignty over sensitive corpus
-    ↓
-Conflict Corpus (The Training Signal)
-    ├── Conflict text (antithesis) — adversarial assertions
-    ├── Refutation testimony (thesis) — ground truth under cross-examination
-    └── Divergence between them = the measurable signal
-    ↓
-Beneficial Outcome Predictor (The Target)
-    — Navigational output in the Art register
-    — Not "who was right" but "where is the human and what is the path"</code></pre>
-
-      <h3>Application: Justice Systems and Conflict Resolution</h3>
-
-      <p>Family court and civil justice systems are the primary documented testbed for Semantic Edge's conflict corpus — and a significant potential application domain in their own right.</p>
-
-      <h4>Why Justice Systems Are the Right Starting Point</h4>
-
-      <ul>
-        <li><strong>Clean data.</strong> Court text is timestamped, attributed, and formally registered. Ground truth is documented under cross-examination — rare in conflict datasets.</li>
-        <li><strong>Documented divergence from science.</strong> Current developmental research on paternal involvement, child welfare, and high-conflict litigation outcomes is well-established in the NIH literature. Where court procedures systematically contradict this evidence base, the divergence is measurable and citable.</li>
-        <li><strong>Systemic pattern, not individual error.</strong> The pattern of outcomes across fathers in a given jurisdiction — identical regardless of individual circumstances — is a Layer 4 institutional signal. It is the system operating as designed by its Layer 3 formation.</li>
-        <li><strong>Children as the measurable outcome variable.</strong> Child stability, contact continuity, and mental health outcomes provide a child-centered, scientifically grounded definition of "beneficial" — the outcome variable the predictor model needs.</li>
-      </ul>
-
-      <h4>The Evidence Base the System Ignores</h4>
-
-      <p>The gap between current developmental science and family court procedure is the founding divergence signal of this project. Decades of NIH-supported research establish that active father involvement is independently protective against adolescent depression, risk-taking, and self-harm. Paternal marginalization is a documented risk factor. Statutory provisions supporting maximum parenting time and the friendly parent principle exist in law. The evidence base is not contested. Its application in court is.</p>
-
-      <p>Legislative efforts to make coaching and parental alienation testimony inadmissible — framed as protective measures — operationalize a Layer 3 framework that structurally precludes certain evidentiary categories regardless of their merit in a specific case. The text of such legislation, analyzed through the Vivify engine's left/right dual pass, carries a measurable Layer 1 signal. It is recoverable from the language.</p>
-
-      <h4>Income Path: From Personal Corpus to General Tool</h4>
-
-      <p>The justice application is both the founding use case and a viable income path — because the problem is not rare. Fathers, families, and individuals navigating adversarial legal processes face identical structural dynamics across jurisdictions. A tool that:</p>
-
-      <ul>
-        <li>Reads conflict text and identifies the Layer 1-4 signal driving it</li>
-        <li>Predicts adversarial moves before they materialize (as demonstrated in proof-of-concept)</li>
-        <li>Generates navigational output — not legal advice, but pattern recognition the individual can act on</li>
-        <li>Operates privately on local hardware with zero cloud exposure of sensitive documents</li>
-      </ul>
-
-      <p>...addresses a gap that no current tool fills. Legal AI tools are built for lawyers navigating procedure. This tool is built for humans navigating conflict — with the science of beneficial outcomes as its compass, not the procedural rules of the system producing the harm.</p>
-
-      <p>The broader application — any high-stakes conflict domain where text carries distal neurological signal and outcomes are measurable — extends to workplace dispute resolution, mediation support, and institutional accountability documentation. Justice is the testbed. The tool generalizes.</p>
-
     </section>
 
     <hr>
 
-    <!-- ════════════════════ TECH STACK ════════════════════ -->
-    <section id="stack">
-      <h2>Technology Stack</h2>
-
-      <table>
-        <thead><tr><th>Component</th><th>Technology</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Core Language</strong></td><td>Python 3</td></tr>
-          <tr><td><strong>Web Framework</strong></td><td>Flask</td></tr>
-          <tr><td><strong>Encryption</strong></td><td>SSH/OpenSSH, PBKDF2-HMAC-SHA256</td></tr>
-          <tr><td><strong>Filesystem Mounting</strong></td><td>SSHFS</td></tr>
-          <tr><td><strong>Terminal Browser</strong></td><td>w3m</td></tr>
-          <tr><td><strong>WiFi Management</strong></td><td>NetworkManager (nmcli)</td></tr>
-          <tr><td><strong>Android Environment</strong></td><td>Termux + Termux:Boot</td></tr>
-          <tr><td><strong>Data Storage</strong></td><td>JSON over filesystem (autovivified)</td></tr>
-          <tr><td><strong>Version Control</strong></td><td>Git</td></tr>
-          <tr><td><strong>AI Assistance</strong></td><td>Claude, Perplexity, Gemini, Copilot</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- ════════════════════ ACHIEVEMENTS ════════════════════ -->
-    <section id="achievements">
-      <h2>Key Achievements</h2>
-
-      <ul>
-        <li><strong>Hardened Android Userspace</strong> — Reliably operates within Android's extreme syscall restrictions</li>
-        <li><strong>Local-First Data Sovereignty</strong> — Zero cloud dependencies; all data stays on participant hardware</li>
-        <li><strong>Autovivification Engine</strong> — Schema-free data vivification proven in production</li>
-        <li><strong>Human-in-the-Loop Security</strong> — Physical proximity and manual confirmation replace cloud-based trust</li>
-        <li><strong>Unified Admin Workflow</strong> — SSHFS mount bridges mobile execution and laptop-based development</li>
-        <li><strong>Semantic-Digital Framework</strong> — Left/right duality formalized for systematic inference processing</li>
-        <li><strong>Objective Data Constructs</strong> — Bottleable, machine-repeatable left-side processes defined</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <!-- ════════════════════ ROADMAP ════════════════════ -->
-    <section id="roadmap">
-      <h2>Project Roadmap</h2>
-
-      <table>
-        <thead><tr><th>Phase</th><th>Focus</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Foundation</strong></td><td>Secure vault, SSH tunneling, SSHFS, auto-start</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
-          <tr><td><strong>Autovivification MVP</strong></td><td>Secret manager with deep_update, schema-free storage</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
-          <tr><td><strong>Inference Organization</strong></td><td>Keyword-clump extraction, emergent categories, search paths</td><td><span class="badge badge-progress">🔄 In Progress</span></td></tr>
-          <tr><td><strong>Mesh Networking</strong></td><td>Phone-to-phone bridging, peer discovery, routing &amp; failover</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
-          <tr><td><strong>Therapeutic Modeling</strong></td><td>Left/right tension scoring, beneficial outcome prediction</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
-          <tr><td><strong>Local LLM Integration</strong></td><td>Feeding Vivify structures into localized AI for real-time prediction</td><td><span class="badge badge-future">📋 Future</span></td></tr>
-          <tr><td><strong>Notation Tooling</strong></td><td>Interactive process flow viewer, structure validators</td><td><span class="badge badge-future">📋 Future</span></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <hr>
-
-    <!-- ════════════════════ REPO LINKS ════════════════════ -->
-    <section id="repos">
-      <h2>Repository Links</h2>
-
-      <ul>
-        <li><a href="https://github.com/robolawyer-tm"><strong>star-bridge</strong></a> — SSH admin connection manager, phone discovery, mesh networking</li>
-        <li><a href="https://github.com/robolawyer-tm"><strong>secret-server</strong></a> — Hardened Flask app, autovivification storage, web UI</li>
-        <li><a href="https://github.com/robolawyer-tm"><strong>pillars</strong></a> — Architectural vision and design philosophy (this document)</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <blockquote>"Rather than bury important architectural decisions deep
- in implementation code, pillars documents them at the thought level — 
-making them retrievable, linker-friendly, and extensible."</blockquote>
+    <blockquote>"Rather than bury important architectural decisions deep in implementation code, pillars documents them at the thought level — making them retrievable, linker-friendly, and extensible."</blockquote>
 
   </main>
 
   <footer>
-    <p style="margin-bottom: 0.5rem;"><span>🄯</span> Copyleft 2026 - Robolawyer: free to share and remix wo restrictions</p>
+    <p style="margin-bottom:0.5rem;"><span>🄯</span> Copyleft 2026 — Robolawyer: free to share and remix without restrictions</p>
     <p>© robolawyer-tm • Local-first • Privacy-preserving • Human-centric</p>
   </footer>
 
-
-
-</body></html>
+<!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/index.html | rebuilt from llms-full.txt master — six sections, new order, TOC, card glow effect, updated roadmap -->
+</body>
+</html>
