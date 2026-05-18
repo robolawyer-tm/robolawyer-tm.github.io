@@ -10,32 +10,60 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "robolawyer-tm",
-    "alternateName": "Pillars",
-    "description": "An open research ecosystem for predicting beneficial outcomes in complex human situations using analogical synthesis — bridging semantic and digital processing on local, privacy-preserving hardware.",
-    "url": "https://robolawyer-tm.github.io",
-    "applicationCategory": "ResearchApplication",
-    "operatingSystem": "Linux, Android (Termux)",
-    "programmingLanguage": "Python",
-    "author": {
-      "@type": "Organization",
-      "name": "robolawyer-tm",
-      "url": "https://github.com/robolawyer-tm"
-    },
-    "codeRepository": [
-      "https://github.com/robolawyer-tm/vivify-inferences",
-      "https://github.com/robolawyer-tm/star-bridge",
-      "https://github.com/robolawyer-tm/secret-server",
-      "https://github.com/robolawyer-tm/pillars"
-    ],
-    "keywords": [
-      "analogical synthesis", "schema-free data", "autovivification",
-      "local-first", "edge computing", "semantic data engine",
-      "SSH mesh networking", "social science modeling",
-      "beneficial outcome prediction", "privacy-preserving"
-    ],
-    "isAccessibleForFree": true
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://robolawyer-tm.github.io/#website",
+        "name": "robolawyer-tm — Pillars",
+        "alternateName": "Semantic Edge",
+        "url": "https://robolawyer-tm.github.io",
+        "description": "Modeling beneficial social outcomes through schema-free semantic data, local-first computation, and human-centric security.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://robolawyer-tm.github.io/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://robolawyer-tm.github.io/#org",
+        "name": "robolawyer-tm",
+        "url": "https://robolawyer-tm.github.io",
+        "sameAs": ["https://github.com/robolawyer-tm"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://robolawyer-tm.github.io/#software",
+        "name": "robolawyer-tm Research Ecosystem",
+        "alternateName": "Semantic Edge",
+        "description": "An open research ecosystem for predicting beneficial outcomes in complex human situations using analogical synthesis — bridging semantic and digital processing on local, privacy-preserving hardware.",
+        "url": "https://robolawyer-tm.github.io",
+        "applicationCategory": "ResearchApplication",
+        "operatingSystem": "Linux, Android (Termux)",
+        "programmingLanguage": "Python",
+        "isAccessibleForFree": true,
+        "author": { "@id": "https://robolawyer-tm.github.io/#org" },
+        "codeRepository": [
+          "https://github.com/robolawyer-tm/vivify-inferences",
+          "https://github.com/robolawyer-tm/star-bridge",
+          "https://github.com/robolawyer-tm/secret-server",
+          "https://github.com/robolawyer-tm/pillars"
+        ],
+        "featureList": [
+          "Analogical synthesis pipeline (FABRIC: vivify → right_pass → categorize → tension_score → reify)",
+          "Schema-free semantic data engine with autovivification",
+          "Local-first, zero cloud dependencies",
+          "SSH mesh networking on Android/Termux",
+          "Left/right dual-lens inference with tension scoring",
+          "Distilled essence persistence (YTDMSP)"
+        ],
+        "keywords": "analogical synthesis, schema-free data, autovivification, local-first, edge computing, semantic data engine, SSH mesh networking, social science modeling, beneficial outcome prediction, privacy-preserving, social neurology, FABRIC pipeline",
+        "about": [
+          { "@type": "Thing", "name": "Conflict resolution" },
+          { "@type": "Thing", "name": "Beneficial outcome prediction" },
+          { "@type": "Thing", "name": "Local-first computing" },
+          { "@type": "Thing", "name": "Social neurology" },
+          { "@type": "Thing", "name": "Semantic data processing" }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -729,5 +757,6 @@ HEGELIAN SYNTHESIS (the target):
   </footer>
 
 <!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/index.html | rebuilt from llms-full.txt master — six sections, new order, TOC, card glow effect, updated roadmap -->
+<!-- llm: claude-sonnet-4-6 | 2026-05-18 | repos/robolawyer-tm.github.io/index.html | upgraded JSON-LD to @graph — three nodes (WebSite, Organization, SoftwareApplication) with featureList, about, sameAs -->
 </body>
 </html>
