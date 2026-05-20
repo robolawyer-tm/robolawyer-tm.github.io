@@ -12,6 +12,17 @@ robolawyer-tm is an open research ecosystem for predicting beneficial outcomes i
 - [Full content](https://robolawyer-tm.github.io/llms-full.txt): Complete text for deep AI indexing.
 - [Blog](https://robolawyer-tm.github.io/blog/): Session notes and milestone posts.
 
+## Blog Posts
+
+- [The Status Quo Operator: When Truth Isn't Enough](https://robolawyer-tm.github.io/blog/2026/05/20/status-quo-operator-when-truth-isnt-enough/) — structural commitment preservation; why truth-telling fails a specific class of conflict; DNA exoneration as cleanest signal; navigational modeling target
+- [The Logos Schema: A Coordinate System for Social Communication](https://robolawyer-tm.github.io/blog/2026/05/20/logos-schema-coordinate-system-social-communication/) — signify component; seven sparse dimensions from speech act theory, Grice, Douglas; Dunbar social container model; tension as derived field
+- [Rabbit Ears: Prediction Without Explanation](https://robolawyer-tm.github.io/blog/2026/05/20/rabbit-ears-prediction-without-explanation/) — bimodal voter distribution; emergent prediction without causal account; status quo operator at population scale; warning against premature explanation
+- [Evolution: The Fourth Pillar](https://robolawyer-tm.github.io/blog/2026/05/20/evolution-fourth-pillar/) — evolutionary epistemology; inference store as selection pressure; RISC discipline reframed; schema as genome
+- [Convergent: Vivify and Perplexity, Solving from Opposite Ends](https://robolawyer-tm.github.io/blog/2026/04/28/convergent-vivify-and-perplexity-opposite-ends/) — private semantic layer meets public retrieval layer; epistemic posture as prompt property
+- [Dynamic Workers and Model Routing: First Self-Pass](https://robolawyer-tm.github.io/blog/2026/04/27/dynamic-workers-model-routing-first-self-pass/) — capability-based model routing; pipeline processing its own public text for the first time
+- [Vivify Pipeline Complete: Reify Opens](https://robolawyer-tm.github.io/blog/2026/04/21/vivify-pipeline-complete-reify-opens/) — FABRIC chain end-to-end; reify inverse pass; inference store going public
+- [Shakedown Cruise: Vivify Goes Live](https://robolawyer-tm.github.io/blog/2026/04/15/shakedown-cruise-vivify-goes-live/) — first end-to-end pipeline run; 14 inferences stored; autovivified filesystem live
+
 ## Six Core Sections
 
 1. **The Mission** — analogical synthesis vs dialectical synthesis; the left/right duality as architectural spine
@@ -45,3 +56,4 @@ robolawyer-tm is an open research ecosystem for predicting beneficial outcomes i
 
 - GitHub: https://github.com/robolawyer-tm
 <!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/llms.txt | updated — new six-section structure, added dynamic worker routing, reify, vivify-inferences repo -->
+<!-- llm: claude-sonnet-4-6 | 2026-05-20 | repos/robolawyer-tm.github.io/llms.txt | added Blog Posts section with all 8 posts and one-line descriptions -->
