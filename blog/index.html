@@ -1,21 +1,50 @@
 ---
 layout: default
-title: Blog
+title: Topics
 ---
 
-<h1>Blog</h1>
+<h1>Semantic Edge — Topics</h1>
+<p>Ideas organized by topic, not date. Living documents — each grows as the project develops.</p>
 
+<ul class="topic-list">
+  <li>
+    <h2><a href="/blog/topics/status-quo-operator/">The Status Quo Operator</a></h2>
+    <p>When truth is not enough. Structural commitment preservation — why institutions cannot release prior commitments even when they know the truth. DNA exoneration as the cleanest signal. Navigational modeling target.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/logos-schema/">The Logos Schema</a></h2>
+    <p>A coordinate system for social communication. Functional schema (what communication does) and structural schema (where it occurs in social space) held in tension. The structure/function dichotomy as a second orthogonal axis alongside analog/digital.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/operators/">Operators: Theory to Code to LLM</a></h2>
+    <p>How researcher frameworks become computational operators — and why researcher names in the schema are query seeds for living theory, not just citations. The analog-to-digital bridge at the semantic level.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/social-neurology/">Social Neurology</a></h2>
+    <p>The layer below speech. Layer 1-4 framework, rabbit ears polarization, empathy as the generative force that created social structure rather than the glue that holds it together.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/evolution-pillar/">Evolution as Pillar</a></h2>
+    <p>The inference store as selection pressure. Hypotheses enter sparse; the data selects. RISC discipline reframed: not "only add what's proven" but "add sparse hypotheses and let the data decide." The schema is the genome.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/field-data/">Field Data & the Inference Store</a></h2>
+    <p>Naming the input and what the pipeline builds from it. Why "field data" does user-facing work that "corpus" cannot. The inference store as both output and selection environment.</p>
+  </li>
+  <li>
+    <h2><a href="/blog/topics/cloudflare-architecture/">Cloudflare Architecture</a></h2>
+    <p>The production target — Workers, KV, Durable Objects, LLM consultation at the edge. Privacy by architecture: raw conflict data never reaches persistent storage. Parked until the Python prototype proves the model.</p>
+  </li>
+</ul>
+
+<hr/>
+<h2>Session posts</h2>
+<p>Chronological record — older format, kept for reference.</p>
 <ul class="post-list">
   {% for post in site.posts %}
   <li>
     <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    {% if post.tags %}
-    <p class="post-tags">
-      {% for tag in post.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
-    </p>
-    {% endif %}
-    <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    — <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>

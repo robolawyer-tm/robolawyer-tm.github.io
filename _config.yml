@@ -23,6 +23,8 @@ defaults:
 
 exclude:
   - "Pillars — Architectural Vision_files"
-  - "*.txt"
+  - "llms-full.txt"
+  - "llms-full.md"
+  - "llms.md"
   - "sitemap.xml"
   - "robots.txt"
