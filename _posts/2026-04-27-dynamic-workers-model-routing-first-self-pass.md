@@ -3,6 +3,7 @@ layout: post
 title: "Dynamic Workers, Model Routing, and the First Self-Pass"
 date: 2026-04-27
 tags: [vivify, FABRIC, dynamic-workers, model-routing, semantic-edge, inference, pipeline]
+description: "capability-based model routing; pipeline processing its own public text for the first time"
 ---
 **Three milestones today.** The pipeline got smarter about which model it uses, the concept of dynamic workers got its first architectural definition, and — the one that felt like something — the vivify pipeline processed the site's own public text for the first time. The system read itself.
 

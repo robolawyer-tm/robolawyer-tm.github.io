@@ -3,6 +3,7 @@ layout: post
 title: "Pipeline Complete: reify Opens the Retrieval Box"
 date: 2026-04-21
 tags: [vivify, FABRIC, reify, inference, pipeline, retrieval]
+description: "FABRIC chain end-to-end; reify inverse pass; inference store going public"
 ---
 **Status update:** every component of the vivify-inferences pipeline has been built and rehearsed. The FABRIC chain runs end-to-end. The inverse pass — `reify.py` — is now open, completing the loop from raw text to structured inference and back to felt prose.
 

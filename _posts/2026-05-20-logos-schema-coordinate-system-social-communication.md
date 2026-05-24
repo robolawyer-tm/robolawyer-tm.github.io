@@ -3,6 +3,7 @@ layout: post
 title: "The Logos Schema: A Coordinate System for Social Communication"
 date: 2026-05-20
 tags: [logos, signify, schema, social-structure, speech-acts, JSON, Dunbar]
+description: "signify component; seven sparse dimensions from speech act theory, Grice, Douglas; Dunbar social container model; tension as derived field"
 ---
 **Today we built the first sparse coordinate system for social communication: the logos schema.** Not a taxonomy, not a framework borrowed from another discipline — coordinates. Seven dimensions. All null until an inference lands. The schema is designed to be deformed by the data, not the other way around.
 

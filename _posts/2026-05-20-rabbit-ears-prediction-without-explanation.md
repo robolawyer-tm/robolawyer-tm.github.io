@@ -3,6 +3,7 @@ layout: post
 title: "Rabbit Ears: Prediction Without Explanation"
 date: 2026-05-20
 tags: [social-neurology, emergent, prediction, logos, status-quo, rabbit-ears]
+description: "bimodal voter distribution; emergent prediction without causal account; status quo operator at population scale; warning against premature explanation"
 ---
 **The rabbit ears are already in the published social neurology work — a bimodal distribution in US voter behavior that predicts outcomes without a confirmed causal account.** The prediction is solid. The explanation remains open. Every attempt to explain it after the fact is speculation. I'm writing this because what that structure means for the Logos framework is significant, and the warning it carries is worth stating clearly.
 

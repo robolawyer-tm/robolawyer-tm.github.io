@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.title | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://robolawyer-tm.github.io/",
+    "name": "Semantic Edge"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "robolawyer-tm",
+    "@id": "https://robolawyer-tm.github.io/#org"
+  }{% if page.description %},
+  "description": {{ page.description | jsonify }}{% endif %}
+
+}
+</script>
+
+<article class="page-content">
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="page-body">
+    {{ content }}
+  </div>
+
+</article>
+<!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/_layouts/page.html | created — WebPage JSON-LD layout for topic pages -->

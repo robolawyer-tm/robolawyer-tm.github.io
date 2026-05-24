@@ -3,6 +3,7 @@ layout: post
 title: "The Status Quo Operator: When Truth Isn't Enough"
 date: 2026-05-20
 tags: [conflict, logos, operators, baseline, inference, social-structure]
+description: "structural commitment preservation; why truth-telling fails a specific class of conflict; DNA exoneration as cleanest signal; navigational modeling target"
 ---
 **Some conflicts aren't about what's true. The truth is already there — already inside the system that holds the outcome in place.** What keeps a person imprisoned despite prosecutor support for innocence is not confusion or ignorance. It's structure. This is the most specific modeling target in the project, and the one that makes it unlike any conflict tool I've seen.
 

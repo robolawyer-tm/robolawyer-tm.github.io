@@ -3,6 +3,7 @@ layout: post
 title: "Evolution: The Fourth Pillar"
 date: 2026-05-20
 tags: [logos, inference-store, evolution, schema, RISC, epistemology]
+description: "evolutionary epistemology; inference store as selection pressure; RISC discipline reframed; schema as genome"
 ---
 **The fourth pillar was already there in the schema design. The `_meta` field says "hypothesis — designed to be deformed by the inference store." That's evolutionary epistemology.** We just hadn't named it. The word was already there. The pillar was unnamed.
 

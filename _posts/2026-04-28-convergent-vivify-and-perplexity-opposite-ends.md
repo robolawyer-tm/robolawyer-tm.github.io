@@ -3,6 +3,7 @@ layout: post
 title: "Convergent: Vivify and Perplexity, Solving from Opposite Ends"
 date: 2026-04-28
 tags: [vivify, perplexity, semantic-edge, architecture, reify, epistemic-posture, pitch]
+description: "private semantic layer meets public retrieval layer; epistemic posture as prompt property"
 ---
 **I built the private semantic layer without knowing Perplexity was building the public one.** That's not derivative. That's convergent. Two architectures, same epistemic posture, opposite starting points. This is what I'm bringing to the NYC AI community.
 
