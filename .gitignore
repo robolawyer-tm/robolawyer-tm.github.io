@@ -1,0 +1,7 @@
+# Browser "Save Page As" sidecar folders (e.g. "PageName_files/")
+*_files/
+
+# Jekyll build output and local-only material (mirrors .publish_env_only)
+_site/
+.claude/
+.env
