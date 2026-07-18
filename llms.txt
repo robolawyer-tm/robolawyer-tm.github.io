@@ -36,7 +36,7 @@ robolawyer-tm is an open research ecosystem for predicting beneficial outcomes i
 - **Vivify Engine**: Schema-free semantic data engine using autovivification (Perl-inspired hash-of-hashes)
 - **FABRIC**: vivify → right_pass → categorize → tension_score → reify — each step a standalone shell command
 - **Left/Right Duality**: Left (semantic/logos/emotional) and Right (digital/analytical) dual-lens inference pipeline
-- **Tension Score**: Left/right keyword divergence — high tension marks where digital systems most betray analog human truth
+- **Tension Score**: Three numbers read from operator coordinates — predicted (the operators' judgment of un-truth), confirmed (claimed-vs-actual discrepancies, validated sources only), and calibration_delta (their gap, which is the operator-evolution gradient); high tension marks where surface certainty most diverges from underlying truth
 - **Reify**: Inverse pass — stored inference JSON → reconstructed prose; single, synthesize, and voice modes
 - **Dynamic Worker Model Routing**: Capability-based model selection via config; one line to swap models as better ones ship
 - **Social Neurology**: Layer 1-4 model explaining how control behaviors propagate through institutions without coordination
@@ -49,6 +49,13 @@ robolawyer-tm is an open research ecosystem for predicting beneficial outcomes i
 - [star-bridge](https://github.com/robolawyer-tm/star-bridge): SSH admin connection manager, phone discovery, mesh networking
 - [secret-server](https://github.com/robolawyer-tm/secret-server): Hardened Flask app, autovivification storage
 - [pillars](https://github.com/robolawyer-tm/pillars): Architectural vision and design philosophy
+
+## Worked Analyses
+
+Human-readable companions to the coordinate store — each reads the operators' output as meaning, not just numbers.
+
+- [Cross-scale run — significance for humans](https://github.com/robolawyer-tm/vivify-inferences/blob/main/inferences/cross_scale_significance.md): The store's top three cross-scale links explained, including the empathic left-side reading of two Innocence Project cases and the left/right coupling.
+- [Left-wound ↔ right-discrepancy coupling prototype](https://github.com/robolawyer-tm/vivify-inferences/blob/main/inferences/cross_scale_left_right_coupling_prototype.md): Pairs each felt wound to its counted fingerprint across both field cases, with arithmetic that reproduces the stored confirmed-tension values, and a promotion path for wiring confirmation into link weights.
 
 ## Contact
 
