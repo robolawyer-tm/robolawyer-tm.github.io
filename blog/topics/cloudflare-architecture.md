@@ -40,5 +40,7 @@ field data arrives at Worker
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/cloudflare-architecture.md | created — topic page covering Workers, KV, Durable Objects, LLM consultation, privacy boundary, model routing -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/cloudflare-architecture.md | rebrand: Semantic Edge -> Dimensional Fields -->

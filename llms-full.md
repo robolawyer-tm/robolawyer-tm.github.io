@@ -284,7 +284,7 @@ FUNCTIONAL ART (the output register):
   Operates at Layer 1 — felt before it is understood
 ```
 
-Semantic Edge is, at its deepest level, a machine for reading the art that people make involuntarily when they are in conflict — and returning a navigational output in the same register.
+Dimensional Fields is, at its deepest level, a machine for reading the art that people make involuntarily when they are in conflict — and returning a navigational output in the same register.
 
 ### How It All Connects
 
@@ -350,7 +350,7 @@ This persistent intuition reservoir transforms one-shot analysis into lifelong p
 
 ## Application: Justice Systems and Conflict Resolution
 
-Family court and civil justice systems are the primary documented testbed for Semantic Edge's conflict corpus — and a significant potential application domain.
+Family court and civil justice systems are the primary documented testbed for Dimensional Fields's conflict corpus — and a significant potential application domain.
 
 ### Why Justice Systems Are the Right Starting Point
 

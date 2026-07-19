@@ -43,6 +43,8 @@ When reviewing input from other models, the question changes. Instead of "is thi
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-05-20 | repos/robolawyer-tm.github.io/_posts/2026-05-20-evolution-fourth-pillar.md | created — evolution as pillar post: evolutionary epistemology, RISC discipline reframed, inference store as selection environment -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-05-20-evolution-fourth-pillar.md | rebrand: Semantic Edge -> Dimensional Fields -->

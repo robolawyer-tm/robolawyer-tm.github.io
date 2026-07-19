@@ -21,7 +21,7 @@ layout: default
   "isPartOf": {
     "@type": "Blog",
     "@id": "https://robolawyer-tm.github.io/blog/",
-    "name": "Semantic Edge Blog"
+    "name": "Dimensional Fields Blog"
   }{% if page.tags and page.tags.size > 0 %},
   "about": [{% for tag in page.tags %}
     { "@type": "Thing", "name": {{ tag | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
@@ -56,3 +56,5 @@ layout: default
   <a class="u-url" href="{{ page.url | prepend: site.baseurl }}" hidden></a>
 
 </article>
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_layouts/post.html | rebrand: Semantic Edge -> Dimensional Fields -->

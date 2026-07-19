@@ -22,5 +22,7 @@ The fourth pillar was already there in the schema design. The `_meta` field says
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/evolution-pillar.md | created — topic page covering evolutionary epistemology, RISC discipline, inference store as selection pressure, velocity concern -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/evolution-pillar.md | rebrand: Semantic Edge -> Dimensional Fields -->

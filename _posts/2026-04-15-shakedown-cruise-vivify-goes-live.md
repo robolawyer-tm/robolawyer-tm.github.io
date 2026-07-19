@@ -2,7 +2,7 @@
 layout: post
 title: "Shakedown Cruise: Vivify Goes Live"
 date: 2026-04-15
-tags: [vivify, FABRIC, semantic-edge, inference, pipeline]
+tags: [vivify, FABRIC, dimensional-fields, inference, pipeline]
 description: "first end-to-end pipeline run; 14 inferences stored; autovivified filesystem live; FABRIC chain operational"
 ---
 **Conflict Data:** developing functional models that predict beneficial outcomes from conflict data. Not quite there yet but well organized and developing analytic capabilities (from relevant inferences) into "autovivified" persistence that, as a database, should be "completely there". If you know, you know! Baby steps, but at today's development rate, we should soon be absorbing large files (of conflict data). Producing beneficial structure will come next.  
@@ -95,4 +95,6 @@ vivify-inferences
 
 
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-04-15-shakedown-cruise-vivify-goes-live.md | rebrand: Semantic Edge -> Dimensional Fields -->

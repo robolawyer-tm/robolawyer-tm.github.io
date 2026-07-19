@@ -22,5 +22,7 @@ Some conflicts aren't about what's true. The truth is already there — already 
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/status-quo-operator.md | created — topic page seeded from blog post and inbox captures -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/status-quo-operator.md | rebrand: Semantic Edge -> Dimensional Fields -->

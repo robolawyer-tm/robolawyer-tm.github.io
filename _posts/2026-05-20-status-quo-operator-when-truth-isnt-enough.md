@@ -41,6 +41,8 @@ No existing conflict framework addresses this specifically. The closest analogue
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-05-20 | repos/robolawyer-tm.github.io/_posts/2026-05-20-status-quo-operator-when-truth-isnt-enough.md | created — status quo operator post from inbox capture; structural commitment preservation, DNA exoneration signal, navigational modeling target -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-05-20-status-quo-operator-when-truth-isnt-enough.md | rebrand: Semantic Edge -> Dimensional Fields -->

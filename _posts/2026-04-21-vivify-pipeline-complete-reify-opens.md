@@ -60,6 +60,8 @@ The remaining frontier is the multi-model convergence layer, which sits above th
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-04-21 | repos/robolawyer-tm.github.io/_posts/2026-04-21-vivify-pipeline-complete-reify-opens.md | created — pipeline status update, reify completion, first retrieval test -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-04-21-vivify-pipeline-complete-reify-opens.md | rebrand: Semantic Edge -> Dimensional Fields -->

@@ -64,6 +64,8 @@ The files are live at [wholesystemsmodel.org](https://wholesystemsmodel.org/repo
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-05-20 | repos/robolawyer-tm.github.io/_posts/2026-05-20-logos-schema-coordinate-system-social-communication.md | created — logos schema post: signify component, seven dimensions, Dunbar social container, tension as derived -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-05-20-logos-schema-coordinate-system-social-communication.md | rebrand: Semantic Edge -> Dimensional Fields -->

@@ -2,7 +2,7 @@
 layout: post
 title: "Convergent: Vivify and Perplexity, Solving from Opposite Ends"
 date: 2026-04-28
-tags: [vivify, perplexity, semantic-edge, architecture, reify, epistemic-posture, pitch]
+tags: [vivify, perplexity, dimensional-fields, architecture, reify, epistemic-posture, pitch]
 description: "private semantic layer meets public retrieval layer; epistemic posture as prompt property"
 ---
 **I built the private semantic layer without knowing Perplexity was building the public one.** That's not derivative. That's convergent. Two architectures, same epistemic posture, opposite starting points. This is what I'm bringing to the NYC AI community.
@@ -55,6 +55,8 @@ That's the pitch. And it was built before I knew it was one.
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-04-28 | repos/robolawyer-tm.github.io/_posts/2026-04-28-convergent-vivify-and-perplexity-opposite-ends.md | created — convergent architecture pitch, Perplexity public layer + vivify private layer, epistemic posture as prompt property -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-04-28-convergent-vivify-and-perplexity-opposite-ends.md | rebrand: Semantic Edge -> Dimensional Fields -->

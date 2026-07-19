@@ -34,5 +34,7 @@ Live at [wholesystemsmodel.org/repos/pillars/logos/](https://wholesystemsmodel.o
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/logos-schema.md | created — topic page covering all four logos schema files and the structure/function dichotomy -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/logos-schema.md | rebrand: Semantic Edge -> Dimensional Fields -->

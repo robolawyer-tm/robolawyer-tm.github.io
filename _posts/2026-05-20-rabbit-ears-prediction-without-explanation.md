@@ -45,6 +45,8 @@ The pipeline's job is not to explain the rabbit ears. It is to build something c
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-05-20 | repos/robolawyer-tm.github.io/_posts/2026-05-20-rabbit-ears-prediction-without-explanation.md | created — rabbit ears post: emergent prediction, status quo at scale, navigational principle, warning against premature explanation -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-05-20-rabbit-ears-prediction-without-explanation.md | rebrand: Semantic Edge -> Dimensional Fields -->

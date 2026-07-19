@@ -29,5 +29,7 @@ A coded `grice_operator.py` applies a fixed 1975 version of the theory. An LLM c
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/operators.md | created — topic page covering pipeline vs semantic operators, theory-code-LLM bridge, _src as query seeds -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/operators.md | rebrand: Semantic Edge -> Dimensional Fields -->

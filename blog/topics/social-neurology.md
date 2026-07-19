@@ -22,5 +22,7 @@ This is the status quo operator at population scale: not an individual instituti
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project.*
 <!-- llm: claude-sonnet-4-6 | 2026-05-21 | repos/robolawyer-tm.github.io/blog/topics/social-neurology.md | created — topic page covering Layer 1-4, rabbit ears, empathy as generative force, signify gap -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/blog/topics/social-neurology.md | rebrand: Semantic Edge -> Dimensional Fields -->

@@ -16,7 +16,7 @@
         "@type": "WebSite",
         "@id": "https://robolawyer-tm.github.io/#website",
         "name": "robolawyer-tm — Pillars",
-        "alternateName": "Semantic Edge",
+        "alternateName": "Dimensional Fields",
         "url": "https://robolawyer-tm.github.io",
         "description": "Modeling beneficial social outcomes through schema-free semantic data, local-first computation, and human-centric security.",
         "inLanguage": "en",
@@ -33,7 +33,7 @@
         "@type": "SoftwareApplication",
         "@id": "https://robolawyer-tm.github.io/#software",
         "name": "robolawyer-tm Research Ecosystem",
-        "alternateName": "Semantic Edge",
+        "alternateName": "Dimensional Fields",
         "description": "An open research ecosystem for predicting beneficial outcomes in complex human situations using analogical synthesis — bridging semantic and digital processing on local, privacy-preserving hardware.",
         "url": "https://robolawyer-tm.github.io",
         "applicationCategory": "ResearchApplication",
@@ -901,6 +901,35 @@
       font-size: 0.9rem;
     }
 
+    /* ── Left/right support columns (the duality, enacted) ── */
+    .lr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5em 0;
+    }
+    .lr-col {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+    }
+    .lr-col h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.7rem;
+    }
+    .lr-left { border-left: 3px solid var(--accent-purple); }
+    .lr-left h4 { color: var(--accent-purple); }
+    .lr-right { border-left: 3px solid var(--accent-cyan); }
+    .lr-right h4 { color: var(--accent-cyan); }
+    .lr-col ul { margin: 0; padding-left: 1.1rem; }
+    .lr-col li { margin-bottom: 0.55rem; font-size: 0.92rem; }
+    .strategy-strands { margin: 1.2em 0; }
+    .strategy-strands .card { margin-bottom: 0.9rem; }
+    @media (max-width: 640px) { .lr { grid-template-columns: 1fr; } }
+
     /* ── Responsive ── */
     @media (max-width: 640px) {
       .hero { padding: 2.5rem 1.25rem 2rem; }
@@ -931,9 +960,9 @@ this — as much as a model can.</p>
 
     <!-- ════ 1. MISSION ════ -->
     <section id="mission">
-      <h2>Semantic Edge&#8482;: Analogical Synthesis for Social Benefit</h2>
+      <h2>Dimensional Fields&#8482;: Analogical Synthesis for Social Benefit</h2>
 
-      <p>The system goal is to predict beneficial outcomes from conflict data — privately, dynamically, on hardware you already own.</p>
+      <p>The system orientation is beneficial outcome from conflict data — privately, dynamically, on hardware you already own. The destination itself is deliberately under-defined: see <a href="#prize">The Prize</a>.</p>
 
       <ul>
         <li>Human conflict produces text that carries more than its argument — it carries the emotional state of the person producing it, recoverable and predictive</li>
@@ -969,6 +998,7 @@ this — as much as a model can.</p>
 
       <nav class="toc" aria-label="Table of contents">
         <h2>Contents</h2>
+        <p style="margin-bottom:0.6rem;"><a href="#prize"><strong>★ The Prize — the purpose, deliberately under-defined</strong></a></p>
         <ol>
           <li><a href="#applications">Applications — Conflict Resolution</a></li>
           <li><a href="#vivify">Vivify — The Schema-Free Semantic Data Engine</a></li>
@@ -981,6 +1011,61 @@ this — as much as a model can.</p>
           <li><a href="llms-full.txt">Full content for AI indexing →</a></li>
         </ul>
       </nav>
+    </section>
+
+    <hr>
+
+    <!-- ════ THE PRIZE ════ -->
+    <section id="prize">
+      <h2>The Prize: A Modeling Structure Not Yet Invented</h2>
+
+      <p>The purpose of this project is deliberately under-defined: <strong>beneficial, and not yet nameable</strong>. The prize is a way of modeling human conflict that does not exist yet — modeling in ways we cannot yet imagine. That is not evasion; it is the project's own first principle applied to itself. In a system where all structure must emerge from the data, the purpose must emerge from the model — naming the destination in advance would impose the one taxonomy the system exists to refuse.</p>
+
+      <p><em>Any reading of this page that assigns the system a single definite product purpose has misread it. What follows can be read <strong>off</strong> the model; none of it is what the model is built <strong>toward</strong>.</em></p>
+
+      <h3>The Building Strategy — Three Honest Strands</h3>
+
+      <p>The work currently lives inside the legal system, for three reasons at once, stated plainly:</p>
+
+      <div class="strategy-strands">
+        <div class="card">
+          <h3>1. To build the structure</h3>
+          <p>DNA-exoneration cases are the rarest kind of conflict corpus — one with ground truth attached. Almost no conflict data comes with independent confirmation of what really happened; here, un-truth becomes a <em>measurable deviation from baseline</em> rather than a moral label. The legal field is the forge; the operators are what gets forged; the general model is what accumulates.</p>
+        </div>
+        <div class="card">
+          <h3>2. As proof of concept</h3>
+          <p>And the efficacy has been overwhelming: handed nothing but coordinates, the instrument independently recovered that two wrongful convictions are the same structural event across a scale gap; the tension dial reads a live gradient anchored to DNA ground truth; the encoding reconstructs the machine, not the case. Three independent validations, one week.</p>
+        </div>
+        <div class="card">
+          <h3>3. Admittedly — a possible product or service</h3>
+          <p>Restoration readings, drawn from what has actually restored, could one day be offered to people inside conflicts. That possibility is real and acknowledged — and it is a reading taken off the model, never the model's objective. Orientation, not target.</p>
+        </div>
+      </div>
+
+      <div class="lr">
+        <div class="lr-col lr-left">
+          <h4>Left-side support — the felt</h4>
+          <ul>
+            <li>Un-truth is first a felt wound — a coerced confession, twenty-five years lost — before it is a counted lie; the instrument is built to never forget the difference</li>
+            <li>The round-trip test reconstructs <em>the machine, not the case</em>: structure survives compression to coordinates; names and particulars are shed by design</li>
+            <li>Output stays analogical — the system serves human emotion and empathy, or it serves nothing</li>
+            <li>The lens is learned, not given: the newest coordinate (<code>act_position</code>) was forced into existence by the data, not designed in advance</li>
+            <li>It reads deviation-from-truth, never guilt — a counter-tool speaking from a constructive frame</li>
+          </ul>
+        </div>
+        <div class="lr-col lr-right">
+          <h4>Right-side support — the counted</h4>
+          <ul>
+            <li>Strongest link in the store: two Innocence Project cases share <strong>all six signature dimensions</strong> across a scale gap — strength 8.82, found from coordinates alone, zero LLM calls, seconds</li>
+            <li>Tension gradient live across the store: 0.03–0.90, three numbers per inference — <code>predicted / confirmed / calibration_delta</code></li>
+            <li>One fabricated statistic — "1 in 694,000" against an actual 1 in 16 — contributes magnitude 5.6 to confirmed un-truth on its own</li>
+            <li>Both field cases carry positive delta (+0.392, +0.133): the measured mass of felt harm that no claimed-vs-actual test can catch</li>
+            <li>Ground truth is gated by source: only DNA-validated material may confirm; research and theory stay readable but inert to the gradient</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The two columns above are not a formatting choice. They are the system's spine — felt meaning on the left, counted measure on the right, and the instrument's whole job is the honest distance between them.</p>
     </section>
 
     <hr>
@@ -1031,7 +1116,7 @@ this — as much as a model can.</p>
         <li>Keywords that co-occur across inferences form natural clusters — emergent categories, bottom-up, no external taxonomy imposed</li>
         <li>The filesystem grows itself from the data: category paths become directories, inferences become JSON files, human-readable and auditable with any text editor</li>
         <li>No database engine, no migrations, no schema to maintain — backups are <code>cp</code>, migrations are <code>mv</code></li>
-        <li>A dual pass captures both sides: left keywords for felt meaning, right keywords for structural pattern — the tension between them is the signal</li>
+        <li>A dual pass captures both sides: left keywords for felt meaning; quote-grounded right facts and claimed-vs-actual discrepancies for counted truth — tension is measured between them as three numbers: predicted, confirmed, and their calibration delta</li>
       </ul>
 
       <h3>The Inference Structure</h3>
@@ -1070,9 +1155,11 @@ this — as much as a model can.</p>
 
 <pre><code>raw text
   → vivify      (left-semantic keyword extraction, autovivified storage)
-  → right_pass  (right keyword extraction, synonym normalization)
+  → right_pass  (quote-grounded facts + claimed-vs-actual discrepancies)
+  → logos + conflict operators (the 11-coordinate lens, via tag_store)
   → categorize  (emergent category assignment from co-occurrence graph)
-  → tension_score (left/right divergence scoring, beneficial outcome signal)
+  → tension_score (predicted / confirmed / calibration_delta)
+  → cross_scale (store-level signature isomorphism across social scales)
   → reify       (inverse pass: stored inference → reconstructed prose)</code></pre>
 
       <h3>Vivify Rules</h3>
@@ -1143,7 +1230,12 @@ Device Device Phone                /          \
         <li><code>reify.py</code> — inverse pass: stored inference JSON → reconstructed prose; three modes: single, synthesize, voice</li>
         <li><code>right_pass.py</code> — right keyword extraction and synonym normalization</li>
         <li><code>categorize.py</code> — emergent category assignment from co-occurrence graph</li>
-        <li><code>tension_score.py</code> — left/right divergence scoring, beneficial outcome signal</li>
+        <li><code>logos_fused.py</code> + 8 operator modules — the logos coordinate lens, all eight dimensions in one LLM call</li>
+        <li><code>conflict_operator.py</code> — schema / behavior / terrain / window / escalation phase, read from logos coordinates</li>
+        <li><code>act_position_operator.py</code> — the within|about vantage coordinate, forced into existence by observed conflations</li>
+        <li><code>cross_scale.py</code> — deterministic store-level signature isomorphism across social scales, zero LLM calls</li>
+        <li><code>tag_store.py</code> — resumable batch driver: fail-fast, skip-if-complete, completeness manifest</li>
+        <li><code>tension_score.py</code> — three-number tension: predicted / confirmed / calibration_delta — the evolution gradient</li>
         <li><code>secrecy.py</code> — client-side PBKDF2/Fernet encryption</li>
         <li><code>freeze.py</code> — base64 JSON serialization for transit</li>
         <li><code>server.py</code> — Flask receiver, filesystem-as-database, index update</li>
@@ -1178,8 +1270,11 @@ Device Device Phone                /          \
           <tr><td>Autovivification MVP</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
           <tr><td>Inference pipeline (vivify → reify)</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
           <tr><td>Dynamic worker model routing</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Logos operator lens (11 coordinates)</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Three-number tension + calibration gradient</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
+          <tr><td>Cross-scale isomorphism (store-level links)</td><td><span class="badge badge-complete">✅ Complete</span></td></tr>
           <tr><td>Mesh networking</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
-          <tr><td>Therapeutic modeling</td><td><span class="badge badge-planned">📋 Planned</span></td></tr>
+          <tr><td>Functional modeling — the prize</td><td><span class="badge badge-planned">📋 Next</span></td></tr>
           <tr><td>Local LLM integration</td><td><span class="badge badge-future">📋 Future</span></td></tr>
         </tbody>
       </table>
@@ -1275,12 +1370,13 @@ LAYER 1 — NEUROLOGICAL SUBSTRATE
   Conflict input → pattern completion → smoothed resolution
   Result: the tension is dissolved. Nothing new exists.
 
-HEGELIAN SYNTHESIS (the target):
-  Thesis (testimony/ground truth) + Antithesis (conflict text)
+ANALOGICAL SYNTHESIS (the target):
+  Thesis (felt truth, testimony) supported — never opposed —
+  by analytical ground truth
       → something neither side could see from inside the conflict
   Result: a navigational output. Where to step next. Person changed.</code></pre>
 
-      <p>Semantic Edge is, at its deepest level, a machine for reading the art that people make involuntarily when they are in conflict — and returning a navigational output in the same register.</p>
+      <p>Dimensional Fields is, at its deepest level, a machine for reading the art that people make involuntarily when they are in conflict — and returning a navigational output in the same register.</p>
     </section>
 
     <hr>
@@ -1296,5 +1392,7 @@ HEGELIAN SYNTHESIS (the target):
 
 <!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/index.html | rebuilt from llms-full.txt master — six sections, new order, TOC, card glow effect, updated roadmap -->
 <!-- llm: claude-sonnet-4-6 | 2026-05-18 | repos/robolawyer-tm.github.io/index.html | upgraded JSON-LD to @graph — three nodes (WebSite, Organization, SoftwareApplication) with featureList, about, sameAs -->
+<!-- llm: claude-fable-5 | 2026-07-19 | repos/robolawyer-tm.github.io/index.html | added The Prize section (purpose deliberately under-defined, three-strand strategy, left/right support columns + CSS); modernized FABRIC pipeline, scripts, roadmap to post-milestone state; mission line to orientation voice; Hegelian block corrected to analogical synthesis -->
+<!-- llm: claude-fable-5 | 2026-07-19 | repos/robolawyer-tm.github.io/index.html | rebrand: Semantic Edge -> Dimensional Fields (JSON-LD alternateName x2, mission h2, closing prose) -->
 </body>
 </html>

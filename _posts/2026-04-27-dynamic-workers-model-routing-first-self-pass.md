@@ -2,7 +2,7 @@
 layout: post
 title: "Dynamic Workers, Model Routing, and the First Self-Pass"
 date: 2026-04-27
-tags: [vivify, FABRIC, dynamic-workers, model-routing, semantic-edge, inference, pipeline]
+tags: [vivify, FABRIC, dynamic-workers, model-routing, dimensional-fields, inference, pipeline]
 description: "capability-based model routing; pipeline processing its own public text for the first time"
 ---
 **Three milestones today.** The pipeline got smarter about which model it uses, the concept of dynamic workers got its first architectural definition, and — the one that felt like something — the vivify pipeline processed the site's own public text for the first time. The system read itself.
@@ -56,7 +56,7 @@ The human role in this pass: judge the output. The system produced the editorial
 **The site rebuild followed from the self-pass.**
 
 - `llms-full.txt` rewritten as the canonical master document — six sections, new order, prose sharpened by the vivify pass
-- `index.html` rebuilt from the master — TOC, Semantic Edge™ heading, updated roadmap
+- `index.html` rebuilt from the master — TOC, Dimensional Fields™ heading, updated roadmap
 - `llms.txt` updated to match
 - Section order: Mission → Applications → Vivify → Network → What's Built → Social Neurology
 - Roadmap now shows inference pipeline and model routing as ✅ Complete
@@ -70,6 +70,8 @@ The human role in this pass: judge the output. The system produced the editorial
 
 ---
 
-*Part of the [Semantic Edge](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
+*Part of the [Dimensional Fields](https://robolawyer-tm.github.io) project — local-first, privacy-preserving, human-centric.*
 
 <!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/_posts/2026-04-27-dynamic-workers-model-routing-first-self-pass.md | created — session milestone post, dynamic workers, model routing, first self-pass -->
+
+<!-- llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_posts/2026-04-27-dynamic-workers-model-routing-first-self-pass.md | rebrand: Semantic Edge -> Dimensional Fields -->

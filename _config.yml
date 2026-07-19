@@ -1,5 +1,5 @@
 title: robolawyer-tm
-description: Modeling beneficial outcomes through semantic edge computing — local-first, privacy-preserving, human-centric.
+description: Modeling beneficial outcomes through dimensional fields — local-first, privacy-preserving, human-centric.
 url: "https://robolawyer-tm.github.io"
 baseurl: ""
 
@@ -28,3 +28,4 @@ exclude:
   - "llms.md"
   - "sitemap.xml"
   - "robots.txt"
+# llm: claude-fable-5 | 2026-07-19 | robolawyer-tm.github.io/_config.yml | rebrand: Semantic Edge -> Dimensional Fields (description)
