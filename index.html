@@ -1005,6 +1005,7 @@ this — as much as a model can.</p>
           <li><a href="#network">The Network — Local-First, Private by Architecture</a></li>
           <li><a href="#built">What's Built</a></li>
           <li><a href="#neurology">Social Neurology — The Theoretical Framework</a></li>
+          <li><a href="#reference">The Functional Reference — Every Component, Verified</a></li>
         </ol>
         <ul class="toc-extra">
           <li><a href="blog/">Blog →</a></li>
@@ -1381,6 +1382,119 @@ ANALOGICAL SYNTHESIS (the target):
 
     <hr>
 
+    <!-- ════ 7. FUNCTIONAL REFERENCE ════ -->
+    <section id="reference">
+      <h2>6. The Functional Reference: Every Component, Verified</h2>
+
+      <p>Everything above this line makes claims. This section grounds them: each entry describes what the code actually does — file by file, formula by formula — verified against the repositories, not remembered or aspired. Validity beyond claims.</p>
+
+      <h3>The Pipeline, Whole</h3>
+
+<pre><code>raw text → vivify (left) → right_pass (right) → logos_fused + conflict + act_position (lens)
+        → tension_score (instrument) → categorize / promote / refile (emergent filing)
+        → build_index (roll-up + JSON-LD) → cross_scale (store-level links) → reify (back to voice)</code></pre>
+
+      <h3>Intake — The Two Passes</h3>
+
+      <ul>
+        <li><code>vivify.py</code> — one LLM call extracts 8–12 concept-level left keywords plus 3–6 named clumps; anchors on the store's own <em>established vocabulary</em> (keywords already used by ≥2 inferences, capped at 150) so extraction batches converge on shared terms instead of coining synonyms</li>
+        <li><code>right_pass.py</code> — extracts quote-grounded <code>right_facts</code> (every fact must carry a verbatim quote from the source; ungrounded facts are dropped — fail-closed against hallucination) and <code>discrepancies</code> (claimed-vs-actual pairs: un-truth captured as measurable deviation from baseline); normalizes left keywords through the accumulated synonym rulings</li>
+      </ul>
+
+      <h3>The Lens — Eleven Coordinates</h3>
+
+      <p>Eight logos dimensions, classified in a single LLM call (<code>logos_fused.py</code>), each operator remaining authoritative for its vocabulary; enum values injected from <code>config/coordinates.json</code>, never hand-copied:</p>
+
+      <table>
+        <thead><tr><th>Dimension</th><th>Lineage</th><th>Allowed values</th></tr></thead>
+        <tbody>
+          <tr><td>resonance</td><td>Machin</td><td>harmony / friction / <strong>illusion</strong> — with free-text surface vs. underlying</td></tr>
+          <tr><td>cooperative</td><td>Grice</td><td>honored / violated / suspended; maxim: quantity / quality / relation / manner</td></tr>
+          <tr><td>act_type</td><td>Austin, Searle</td><td>assertive / directive / commissive / expressive / declaration</td></tr>
+          <tr><td>structural</td><td>Dunbar, Ostrom, Tönnies</td><td>scale: self / dyad / small_group / local_network / institution / global — plus six axes (density, persistence, authority, transmission, memory_channel, language_mode)</td></tr>
+          <tr><td>social_field</td><td>Douglas</td><td>quadrant: individualist / isolate / egalitarian / hierarchical; grid and group as 0–1 floats</td></tr>
+          <tr><td>authority</td><td>—</td><td>sovereign / tribal / occult</td></tr>
+          <tr><td>transmission</td><td>—</td><td>broadcast / leak / archive</td></tr>
+          <tr><td>utility</td><td>—</td><td>instruction / narrative / currency (primary + optional secondary)</td></tr>
+        </tbody>
+      </table>
+
+      <ul>
+        <li><code>conflict_operator.py</code> — reads the completed logos coordinates, not raw text (Granovetter, Glasl, Durkheim, Bandura): schema none/latent/activated/<strong>entangled</strong> · behavior none/positioning/<strong>suppression</strong>/escalating/rationalizing · terrain center/drifting/<strong>fringe</strong>/fringe_hook · window closed/forming/open/rationalizing · escalation_phase none/early/threshold/exponential</li>
+        <li><code>act_position_operator.py</code> — <code>within</code> (the text is a move inside its events) vs. <code>about</code> (a report standing outside them); judged on the text's own position, never its subject — forced into existence by three observed conflations in field work</li>
+        <li>Every operator output is schema-gated by <code>validate_coordinates()</code> against <code>config/coordinates.json</code> with a validate-and-retry loop; persistent failure is recorded per inference, never fatal to a batch</li>
+      </ul>
+
+      <h3>Transport and Privacy</h3>
+
+      <ul>
+        <li>LLM calls run through a local <code>claude -p</code> subprocess — no API key, no sampling knobs; transport failure (<code>LLMUnavailable</code>) aborts a batch with exit 3 rather than burning doomed calls or recording quota walls as content errors</li>
+        <li><code>PRIVACY_GATE</code> is a fail-closed tristate: sensitive data may leave the machine only when the gate is explicitly <code>off</code> — <code>on</code>, unset, and unrecognized values all block; local backends are exempt; every operator tags its calls sensitive by default</li>
+      </ul>
+
+      <h3>The Tension Instrument</h3>
+
+<pre><code>predicted = RESONANCE_BASE(harmony .05 | friction .5 | illusion 1.0) × confidence,
+            blended 0.8 / 0.2 with the conflict-alarm fraction × confidence
+confirmed = Σ per discrepancy: 1 + |log10(claimed / actual)|  (numeric)
+                               1.0                            (categorical)
+            squashed total / (total + 4)  — four solid contradictions read 0.5
+calibration_delta = predicted − confirmed   ← the operator-evolution gradient</code></pre>
+
+      <ul>
+        <li><code>confirmed</code> is computed <em>only</em> for sources listed in <code>config/baseline_sources.json</code> (currently DNA exonerations) — a researched correction is a citation, not a baseline; missing config means nothing confirms</li>
+        <li>Observed on the field cases: Washington .892 / .500 / +.392 · Sutton .828 / .695 / +.133 — the positive delta is the measured mass of felt harm no claimed-vs-actual test catches; one fabricated statistic (1-in-694,000 vs. 1-in-16) contributes magnitude 5.6 alone</li>
+        <li>Store-wide: 0.03–0.90, with technical content correctly reading harmony at the low tail — a dial that can read low is what makes high readings mean something</li>
+      </ul>
+
+      <h3>Emergent Filing</h3>
+
+      <ul>
+        <li><code>categorize.py</code> — category seeds are high-degree <em>left</em> keywords only (right keywords support, never seed); tree depth ≤ 3; all structure from the store's own co-occurrence graph</li>
+        <li><code>promote.py</code> / <code>refile.py</code> — categorized inferences move from <code>unclustered/</code> (the honest holding pen) into their category directory; refiling moves sibling files with the inference and refuses to run at a multi-domain root</li>
+        <li><code>converge.py</code> — near-duplicate keywords flagged deterministically (token Jaccard ≥ 0.5), grouped semantically by LLM, applied only from a human-reviewed mapping — <em>the LLM proposes, the human rules, machinery applies</em>; approved rulings feed <code>config/synonyms.json</code> permanently</li>
+      </ul>
+
+      <h3>Store-Level Operators</h3>
+
+      <ul>
+        <li><code>tag_store.py</code> — resumable batch driver: skips complete inferences, writes after each sub-step, fail-fasts on transport loss, and writes a completeness manifest so downstream readers know a partial store from a finished one</li>
+        <li><code>cross_scale.py</code> — deterministic, zero LLM calls: six-dimension signatures (conflict schema/behavior/terrain, resonance, cooperative status, tension banded high ≥ .7 / mid ≥ .4), links require <em>differing</em> social scales, strength = Σ −log(df/N) rarity weight; first real run: 18 usable, 68 honestly skipped, 90 links, top link 8.82 across all six dimensions</li>
+      </ul>
+
+      <h3>Reify — The Inverse Pass</h3>
+
+      <ul>
+        <li><strong>single</strong> — one inference back to 3–6 dense first-person sentences; if the reconstruction feels foreign, the keywords drifted — the standing fidelity test</li>
+        <li><strong>synthesize</strong> — two inferences into one passage that holds both; writes from the tension when they pull apart</li>
+        <li><strong>voice</strong> — a whole category (or domain) speaks as one passage; the most generative mode, and the source of the JSON-LD dataset descriptions</li>
+        <li><code>--dry-run</code> prints the full prompt without any call — inspectable before a token is spent</li>
+      </ul>
+
+      <h3>Anatomy of a Finished Inference</h3>
+
+<pre><code>id, version, timestamp, source            — provenance (source gates confirmed tension)
+raw_text                                  — the original, always preserved
+left_keywords, clumps                     — the felt meaning (vivify)
+right_keywords, right_facts, discrepancies — the counted content (right_pass)
+logos{ 8 dims + act_position }            — each {value, rationale, confidence, _operator}
+conflict{ schema, behavior, terrain, window, escalation_phase, confidence }
+category_paths                            — all emergent addresses (filing uses [0])
+tension{ predicted, confirmed, calibration_delta } + legacy tension_score
+guardrail_actions                         — what the safe defaults did</code></pre>
+
+      <h3>Built, Not Yet Exercised</h3>
+
+      <ul>
+        <li><code>secrecy.py</code> / <code>freeze.py</code> / <code>server.py</code> — the encrypted payload transport flow, the designed channel for any future off-box intake</li>
+        <li><code>quorum.py</code> / <code>web_research.py</code> — multi-provider transport registry and freshness channel; operational, parked</li>
+      </ul>
+
+      <p>Nothing in this section is a roadmap item. Every formula, constant, and vocabulary above is running code, checkable in the <a href="https://github.com/robolawyer-tm/vivify-inferences">public repository</a>.</p>
+    </section>
+
+    <hr>
+
     <blockquote>"Rather than bury important architectural decisions deep in implementation code, pillars documents them at the thought level — making them retrievable, linker-friendly, and extensible."</blockquote>
 
   </main>
@@ -1394,5 +1508,6 @@ ANALOGICAL SYNTHESIS (the target):
 <!-- llm: claude-sonnet-4-6 | 2026-05-18 | repos/robolawyer-tm.github.io/index.html | upgraded JSON-LD to @graph — three nodes (WebSite, Organization, SoftwareApplication) with featureList, about, sameAs -->
 <!-- llm: claude-fable-5 | 2026-07-19 | repos/robolawyer-tm.github.io/index.html | added The Prize section (purpose deliberately under-defined, three-strand strategy, left/right support columns + CSS); modernized FABRIC pipeline, scripts, roadmap to post-milestone state; mission line to orientation voice; Hegelian block corrected to analogical synthesis -->
 <!-- llm: claude-fable-5 | 2026-07-19 | repos/robolawyer-tm.github.io/index.html | rebrand: Semantic Edge -> Dimensional Fields (JSON-LD alternateName x2, mission h2, closing prose) -->
+<!-- llm: claude-fable-5 | 2026-07-19 | repos/robolawyer-tm.github.io/index.html | added section 6 The Functional Reference — condensed from new_material/vivify_functional_reference.md: verified formulas, enum vocabularies, constants, per-component mechanics; validity beyond claims -->
 </body>
 </html>
