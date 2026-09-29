@@ -194,7 +194,7 @@ The pipeline is operational. This is not a roadmap — it is a description of ru
 
 ### Repositories
 
-- [**vivify-inferences**](https://github.com/robolawyer-tm/vivify-inferences) — inference pipeline, public corpus
+- [**vivify-operators**](https://github.com/robolawyer-tm/vivify-operators) — inference pipeline, public corpus
 - [**star-bridge**](https://github.com/robolawyer-tm/star-bridge) — SSH connection manager, phone discovery, mesh networking
 - [**secret-server**](https://github.com/robolawyer-tm/secret-server) — hardened Flask app on Android/Termux, autovivification storage
 - [**pillars**](https://github.com/robolawyer-tm/pillars) — architectural vision and design philosophy
@@ -277,3 +277,4 @@ Dimensional Fields is, at its deepest level, a machine for reading the art that 
 
 _© robolawyer-tm • Local-first • Privacy-preserving • Human-centric_
 <!-- llm: claude-sonnet-4-6 | 2026-04-27 | repos/robolawyer-tm.github.io/llms-full.txt | rewritten — new six-section structure, new order, updated prose from vivify pipeline pass, current roadmap -->
+<!-- llm: claude-opus-5-5 | 2026-09-29 | repos/robolawyer-tm.github.io/llms-full.txt | repo renamed on GitHub: vivify-inferences -> vivify-operators (links and display names) -->
